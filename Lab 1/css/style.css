@@ -10,19 +10,21 @@ body {
 	background-color: #403c3b;
 	margin: 0 auto 0 auto;}
 	/* Responsive page rules at bottom of style sheet */
-
+img {
+	max-width:50%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
 h1 {
-	background-image: url(../images/kinglogo.png);
-	background-repeat: no-repeat;
-	background-position: center center;
+
 	text-align: center;
 	text-indent: -1000%;
 	height: 75px;
-	line-height: 75px;
+	line-height: 30px;
 	width: 117px;
 	margin: 0 auto 0 auto;
 	padding: 30px 10px 20px 10px;}
-
 h2 {
 	color: #fff;
 	font-size: 24px;
