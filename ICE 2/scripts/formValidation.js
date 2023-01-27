@@ -85,7 +85,7 @@ function validUsername(usernameString)
 
 function clearMessage()
 {
-    let errorOut = document.getElementById("formValidation.js").reset();
+
   
 }
 
