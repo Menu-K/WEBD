@@ -25,20 +25,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i>
+                                Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="product.html"><i
-                                    class="fas fa-project-diagram"></i> Products</a>
+                            <a class="nav-link" id="products" href="product.html"><i class="fas fa-project-diagram"></i> Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html"><i class="fas fa-map-signs"></i> Services</a>
+                            <a class="nav-link" id="services" href="services.html"><i class="fas fa-map-signs"></i> Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html"><i class="fas fa-info"></i> About Us</a>
+                            <a class="nav-link" id="about" href="about.html"><i class="fas fa-info"></i> About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+                            <a class="nav-link" id="contact" href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -46,18 +46,60 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Our Products</h1>
-    </div>
 
     <main>
-        <h2>
-            Personal Details
-        </h2>
-        <img src="../Lab 1/images/apocalypse.jpg"></image>
+        <h1>Favourite Pieces of Media</h1>
+        <div class="product-section">
+            <div class="row">
+                <div class="col-md-4>">
+                    <h2>Harry Potter </h2>
+                    <p>
+                        Harry Potter is a series of seven fantasy novels written by British author J.K. Rowling. The
+                        story follows a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley,
+                        who are students at Hogwarts School of Witchcraft and Wizardry. Together, they explore the
+                        magical world, fight against the evil Lord Voldemort and his followers, the Death Eaters, and
+                        uncover the truth about Harry's past. The series has become one of the best-selling book series
+                        in history and has been adapted into a successful film franchise.
+                    </p>
+                    <img src=" Replace image " alt="Harry Potter">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4>">
+                    <h2>The Last of Us</h2>
+                    <p>
+                        The Last of Us is a post-apocalyptic action-adventure game developed by Naughty Dog. The game
+                        follows Joel and Ellie, two survivors in a world that has been devastated by a fungal infection
+                        that has turned most of the human population into aggressive creatures. As they journey across
+                        the country, they must rely on each other to survive and overcome various obstacles, both human
+                        and infected. The game received widespread critical acclaim for its story, characters, and
+                        gameplay, and has since been remastered for newer consoles.
+                    </p>
+                    <img src=" Replace image " alt="The Last of Us">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Only Murders in the Building</h2>
+                    <p>
+                        Only Murders in the Building is an American mystery comedy-drama television series created by
+                        Steve Martin, John Strauss, and Martin Short. The series follows three strangers who share an
+                        obsession with true crime and suddenly find themselves wrapped up in one. The unlikely trio of amateur
+                        sleuths navigate their way through the twists and turns of the murder investigation, using their unique
+                        skills and knowledge to try to solve the crime. The series is a witty and entertaining take on
+                        the classic murder mystery genre.
+                    </p>
+                    <img src=" Replace image " alt="Only Murders in the Building">
+                </div>
+            </div>
+
+        </div>
     </main>
     <!-- Scripting Section -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./Scripts/app.js"></script>
 </body>
+
 </html>

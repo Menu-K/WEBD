@@ -30,27 +30,11 @@
     }
 
     function DisplayProductsPage() {
-        console.log("Products Page");
+        // Get the Products link
+        var productsLink = document.getElementById("products");
 
-        // Step 1. get an entry point(s) (insertion point / deletion point) reference 
-        let DocumentBody = document.body;
-        let MainContent = document.getElementsByTagName("main")[10];
-
-        // Step 2. create an element(s) to insert
-        let MainParagraph = document.createElement("p");
-        let Article = document.createElement("article");
-        let ArticleParagraph = `<p id="ArticleParagraph" class ="mt-3"></p>`
-
-        // Step 3. configure the new element
-        MainParagraph.setAttribute("id", "MainParagraph");
-        MainParagraph.setAttribute("class", "mt-3");
-        MainParagraph.textContent = "This is the Main Paragraph";
-        Article.setAttribute("class", "container");
-
-        // Step 4. Add / Insert the new element
-        MainContent.appendChild(MainParagraph);
-        Article.innerHTML = ArticleParagraph;
-        DocumentBody.appendChild(Article);
+        // Change the text of the Products link to Interests
+        productsLink.innerHTML = "Interests";
 
     }
 
@@ -137,10 +121,6 @@
                 DisplayContactPage();
                 break;
         }
-
     }
-
-
     window.addEventListener("load", Start);
-
 })();
