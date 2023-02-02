@@ -51,14 +51,16 @@ console.log("formValidation.js loaded");
 function validUsername(usernameString) 
 {
     console.log('in validUsername');
+    // reference variables
     let genErE1 = document.getElementById('generalError')
     let usernameInputE1 = document.getElementById('usernameInput');
     let usernameErrorE1 = document.getElementById('usernameError');
     let backgroundColor = "#ffffff";
     let genErMsg = "";
     let usernameErMsg = "";
-
     let usernameRegex = /^\S*$/;
+
+    // username validation as well as error output message
     if (usernameString.length < 5)
     {
         genErMsg = "Username must be at least 5 characters long";
@@ -85,7 +87,11 @@ function validUsername(usernameString)
 
 function clearMessage()
 {
-
+    let errorOutput = document.getElementById('error');
+    for (let i = 0; i < errorOutput.length; i++)
+    {
+        errorOutput[i].innerHTML = "";
+    }
   
 }
 
