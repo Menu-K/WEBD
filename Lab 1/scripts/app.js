@@ -1,16 +1,13 @@
 
 
-(function ()
-{
-    function DisplayHomePage()
-    {
+(function () {
+    function DisplayHomePage() {
         console.log("Home Page");
         let AboutUsButton = document.getElementById("AboutUsButton");
-        AboutUsButton.addEventListener("click", function()
-        {
+        AboutUsButton.addEventListener("click", function () {
             location.href = "about.html";
         });
-        
+
         // Step 1. get an entry point(s) (insertion point / deletion point) reference 
         let DocumentBody = document.body;
         let MainContent = document.getElementsByTagName("main")[0];
@@ -32,11 +29,10 @@
         DocumentBody.appendChild(Article);
     }
 
-    function DisplayProductsPage()
-    {
+    function DisplayProductsPage() {
         console.log("Products Page");
 
-      // Step 1. get an entry point(s) (insertion point / deletion point) reference 
+        // Step 1. get an entry point(s) (insertion point / deletion point) reference 
         let DocumentBody = document.body;
         let MainContent = document.getElementsByTagName("main")[10];
 
@@ -58,42 +54,64 @@
 
     }
 
-    function DisplayServicesPage()
-    {
+    function DisplayServicesPage() {
         console.log("Services Page");
     }
 
-    function DisplayAboutPage()
-    {
+    function DisplayAboutPage() {
         console.log("About Page");
     }
 
-    function DisplayContactPage()
-    {
+    function DisplayContactPage() {
         console.log("Contact Page");
-        document.getElementById("submitBtn").addEventListener("click", function (event)
-        {
+        document.getElementById("submitBtn").addEventListener("click", function (event) {
             var name = document.getElementById("name").value;
             var contactNumber = document.getElementById("contactNumber").value;
             var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-            console.log("Name: " + name);
-            console.log("Contact Number: " + contactNumber);
-            console.log("Email: " + email);
-            console.log("Message: " + message);
-            setTimeout(function () {
-                DisplayHomePage();
-            }, 3000);
+            var isValid = true;
+
+            if (!name) {
+                document.getElementById("nameError").style.display = "block";
+                isValid = false;
+            }
+            else {
+                document.getElementById("nameError").style.display = "none";
+            }
+
+            if (!contactNumber || contactNumber.length != 10) {
+                document.getElementById("contactNumberError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("contactNumberError").style.display = "none";
+            }
+
+            if (!email) {
+                document.getElementById("emailError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("emailError").style.display = "none";
+            }
+
+            if (isValid) {
+                // Output user information to console
+                console.log("Name: " + name);
+                console.log("Contact Number: " + contactNumber);
+                console.log("Email: " + email);
+
+                // Start 3 second timer
+                setTimeout(function () {
+                    // Redirect back to Home Page (index.html)
+                    window.location.href = "index.html";
+                }, 3000);
+            }
         });
     }
 
     // named function option
-    function Start()
-    {
+    function Start() {
         console.log("App Started!");
 
-        switch(document.title)
-        {
+        switch (document.title) {
             case "Home":
                 DisplayHomePage();
                 break;
@@ -110,7 +128,7 @@
                 DisplayContactPage();
                 break;
         }
-       
+
     }
 
 
