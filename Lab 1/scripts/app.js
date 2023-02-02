@@ -35,7 +35,7 @@ Date Completed: [2023-02-02]
     }
 
 
-    // Display Products Page
+    // This function creates a product section and displays the information of each product in it. 
     function DisplayProductsPage() {
         // Get the Products link
         var productsLink = document.getElementById("products");
@@ -43,10 +43,11 @@ Date Completed: [2023-02-02]
         // Change the text of the Products link to Interests
         productsLink.innerHTML = "Interests";
 
+        // An array that holds the information of each product.
         const products = [
             {
                 title: "Harry Potter",
-                description: `Harry Potter is a series of seven fantasy novels written by British author J.K. Rowling. The story follows a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, who are students at Hogwarts School of Witchcraft and Wizardry. Together, they explore the magical world, fight against the evil Lord Voldemort and his followers, the Death Eaters, and uncover the truth about Harry's past. The series has become one of the best-selling book series in history and has been adapted into a successful film franchise.`,
+                description: ` Harry Potter is a series of seven fantasy novels written by British author J.K. Rowling. The story follows a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, who are students at Hogwarts School of Witchcraft and Wizardry. Together, they explore the magical world, fight against the evil Lord Voldemort and his followers, the Death Eaters, and uncover the truth about Harry's past. The series has become one of the best-selling book series in history and has been adapted into a successful film franchise.`,
                 image: "./images/harryPotter.jpg"
             },
             {
@@ -62,9 +63,12 @@ Date Completed: [2023-02-02]
             }
         ];
 
+        // Select the product section in the HTML file
         const productSection = document.querySelector("#product-section");
 
+        // Loop through the products array
         products.forEach(product => {
+            // Append each product to the product section
             productSection.innerHTML += `
         <div class="product">
         <h2>${product.title}</h2>
@@ -77,6 +81,7 @@ Date Completed: [2023-02-02]
 
 
 
+
     // DisplayServicesPage() - A function that displays information about the services
     function DisplayServicesPage() {
         console.log("Services Page");
@@ -86,17 +91,19 @@ Date Completed: [2023-02-02]
             {
                 title: 'Web Design',
                 description: 'I offer professional web design services to help clients establish their online presence. My design services range from simple website layouts to complex e-commerce solutions.',
-                image: ''
+                image: './images/webDesign.jpg'
             },
             {
                 title: 'Skilled in (C++, C#, java)',
                 description: 'I am proficient in several programming languages, including C++, C#, and Java. I can develop software solutions for clients in these languages to meet their specific needs.',
-                image: ''
+                image: './images/language.jpg'
+
             },
             {
                 title: 'Custom Programming',
                 description: 'I offer custom programming services to help clients bring their ideas to life. Whether its a desktop application, a mobile app, or a web-based solution, I have the skills and experience to deliver.',
-                image: ''
+                image: './images/customProgramming.jpg'
+
             }
         ];
         const servicesContainer = document.querySelector('#services-container');
