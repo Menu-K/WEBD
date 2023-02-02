@@ -1,4 +1,6 @@
-(function()
+
+
+(function ()
 {
     function DisplayHomePage()
     {
@@ -69,8 +71,21 @@
     function DisplayContactPage()
     {
         console.log("Contact Page");
+        document.getElementById("submitBtn").addEventListener("click", function (event)
+        {
+            var name = document.getElementById("name").value;
+            var contactNumber = document.getElementById("contactNumber").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            console.log("Name: " + name);
+            console.log("Contact Number: " + contactNumber);
+            console.log("Email: " + email);
+            console.log("Message: " + message);
+            setTimeout(function () {
+                DisplayHomePage();
+            }, 3000);
+        });
     }
-
 
     // named function option
     function Start()
@@ -97,6 +112,7 @@
         }
        
     }
+
 
     window.addEventListener("load", Start);
 
