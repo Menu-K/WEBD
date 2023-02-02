@@ -13,12 +13,20 @@ body {
 }
 
 /* Responsive page rules at bottom of style sheet */
-img {
-  max-width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+.bg-img {
+ 	background-image:  url(../images/apocalypse.jpg);
+ 	background-size: cover;
+ 	height: 100vh;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ }
+
+.welcome-text {
+ 	color: white;
+ 	font-size: 36px;
+ 	text-shadow: 1px 1px black;
+ }
 
 h1 {
   text-align: center;
@@ -72,7 +80,7 @@ li {
   text-shadow: 2px 2px 1px #9f593f;
   height: 50px;
   padding-left: 1em;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .form-container {

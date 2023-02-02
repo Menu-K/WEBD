@@ -1,6 +1,11 @@
-
+/*
+Author: [Menushan Karunakaran]
+Student ID: [100709847]
+Date Completed: [2023-02-02]
+*/
 
 (function () {
+
     function DisplayHomePage() {
         console.log("Home Page");
         let AboutUsButton = document.getElementById("AboutUsButton");
@@ -29,23 +34,63 @@
         DocumentBody.appendChild(Article);
     }
 
+
+    // Display Products Page
     function DisplayProductsPage() {
         // Get the Products link
         var productsLink = document.getElementById("products");
 
         // Change the text of the Products link to Interests
         productsLink.innerHTML = "Interests";
-
     }
 
-    function DisplayServicesPage() {
+
+
+    // Display Service Page
+    function DisplayServicesPage()
+    {
         console.log("Services Page");
+
+        const services = [
+            {
+                title: 'Web Design',
+                description: 'I offer professional web design services to help clients establish their online presence. My design services range from simple website layouts to complex e-commerce solutions.',
+                image: ''
+            },
+            {
+                title: 'Skilled in (C++, C#, java)',
+                description: 'I am proficient in several programming languages, including C++, C#, and Java. I can develop software solutions for clients in these languages to meet their specific needs.',
+                image: ''
+            },
+            {
+                title: 'Custom Programming',
+                description: 'I offer custom programming services to help clients bring their ideas to life. Whether its a desktop application, a mobile app, or a web-based solution, I have the skills and experience to deliver.',
+                image: ''
+            }
+        ];
+        const servicesContainer = document.querySelector('#services-container');
+
+        services.forEach(service => {
+            servicesContainer.innerHTML += `
+        <h2>${service.title}</h2>
+        <p>${service.description}</p>
+        <img src="${service.image}" alt="${service.title}">
+      `;
+        });
     }
 
+
+
+    // Display About Page
     function DisplayAboutPage() {
         console.log("About Page");
     }
 
+
+    /**********************************
+                Contact Form  
+    **********************************/
+    // Display Contact Page
     function DisplayContactPage() {
         console.log("Contact Page");
         document.getElementById("submitBtn").addEventListener("click", function (event) {
@@ -103,6 +148,7 @@
     // named function option
     function Start() {
         console.log("App Started!");
+        
 
         switch (document.title) {
             case "Home":
@@ -121,6 +167,30 @@
                 DisplayContactPage();
                 break;
         }
+        /**********************************
+            Simple DOM Manipulation 3.C) 
+        **********************************/
+         // Get reference to the ul element
+        var navbar = document.querySelector(".navbar-nav");
+
+        // Create the new li element
+        var navLi = document.createElement("li");
+        navLi.classList.add("nav-item");
+
+        // Create the new a element
+        var navLink = document.createElement('a');
+        navLink.classList.add('nav-link');
+        navLink.href = "#";
+        navLink.innerHTML = '<i class="fas fa-user-friends"></i> Human Resources';
+
+        // Append the a element to the li element
+        navLi.appendChild(navLink);
+
+        // Get reference to the About Us li element
+        var aboutUsLi = document.querySelector('.nav-item:nth-child(4)');
+
+        // Insert the new li element after the About Us li element
+        navbar.insertBefore(navLi, aboutUsLi.nextSibling);
     }
     window.addEventListener("load", Start);
 })();
