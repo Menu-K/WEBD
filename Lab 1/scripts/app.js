@@ -42,15 +42,46 @@ Date Completed: [2023-02-02]
 
         // Change the text of the Products link to Interests
         productsLink.innerHTML = "Interests";
+
+        const products = [
+            {
+                title: "Harry Potter",
+                description: `Harry Potter is a series of seven fantasy novels written by British author J.K. Rowling. The story follows a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, who are students at Hogwarts School of Witchcraft and Wizardry. Together, they explore the magical world, fight against the evil Lord Voldemort and his followers, the Death Eaters, and uncover the truth about Harry's past. The series has become one of the best-selling book series in history and has been adapted into a successful film franchise.`,
+                image: "./images/harryPotter.jpg"
+            },
+            {
+                title: "The Last of Us",
+                description: `The Last of Us is a post-apocalyptic action-adventure game developed by Naughty Dog. The game follows Joel and Ellie, two survivors in a world that has been devastated by a fungal infection that has turned most of the human population into aggressive creatures. As they journey across the country, they must rely on each other to survive and overcome various obstacles, both human and infected. The game received widespread critical acclaim for its story, characters, and gameplay, and has since been remastered for newer consoles.`,
+                image: "./images/lastOfUs.jpg"
+
+            },
+            {
+                title: "Only Murders in the Building",
+                description: `Only Murders in the Building is an American mystery comedy-drama television series created by Steve Martin, John Strauss, and Martin Short. The series follows three strangers who share an obsession with true crime and suddenly find themselves wrapped up in one. The unlikely trio of amateur sleuths navigate their way through the twists and turns of the murder investigation, using their unique skills and knowledge to try to solve the crime. The series is a witty and entertaining take on the classic murder mystery genre.`,
+                image: "./images/murderInTheBuilding.jpg"
+            }
+        ];
+
+        const productSection = document.querySelector("#product-section");
+
+        products.forEach(product => {
+            productSection.innerHTML += `
+        <div class="product">
+        <h2>${product.title}</h2>
+        <p>${product.description}</p>
+        <img src="${product.image}" alt="${product.title}">
+        </div>
+        `;
+        });
     }
 
 
 
-    // Display Service Page
-    function DisplayServicesPage()
-    {
+    // DisplayServicesPage() - A function that displays information about the services
+    function DisplayServicesPage() {
         console.log("Services Page");
 
+        // Array of service objects with title, description and image properties
         const services = [
             {
                 title: 'Web Design',
@@ -70,13 +101,14 @@ Date Completed: [2023-02-02]
         ];
         const servicesContainer = document.querySelector('#services-container');
 
-        services.forEach(service => {
+        for (let i = 0; i < services.length; i++) {
+            let service = services[i];
             servicesContainer.innerHTML += `
-        <h2>${service.title}</h2>
-        <p>${service.description}</p>
-        <img src="${service.image}" alt="${service.title}">
-      `;
-        });
+            <h2>${service.title}</h2>
+            <p>${service.description}</p>
+            <img src="${service.image}" alt="${service.title}">
+            `;
+        }
     }
 
 
@@ -90,20 +122,23 @@ Date Completed: [2023-02-02]
     /**********************************
                 Contact Form  
     **********************************/
-    // Display Contact Page
+    // Function to display contact page
     function DisplayContactPage() {
         console.log("Contact Page");
+        // Event listener for submit button click
         document.getElementById("submitBtn").addEventListener("click", function (event) {
-            // Variables
+            // Variables to store user inputs
             let name = document.getElementById("name").value;
             let contactNumber = document.getElementById("contactNumber").value;
             let email = document.getElementById("email").value;
             let message = document.getElementById("message").value;
 
+            // Variables to store error elements
             let nameError = document.getElementById("nameError");
             let contactNumberError = document.getElementById("contactNumberError");
             let emailError = document.getElementById("emailError");
 
+            // Variable to store validation status
             let isValid = true;
 
             // Name Validation
@@ -128,7 +163,7 @@ Date Completed: [2023-02-02]
                 emailError.style.display = "none";
             }
 
-
+            // If all user inputs are valid
             if (isValid) {
                 // Output user information to console
                 console.log("Name: " + document.getElementById("name").value);
@@ -145,11 +180,10 @@ Date Completed: [2023-02-02]
         });
     }
 
+
     // named function option
     function Start() {
         console.log("App Started!");
-        
-
         switch (document.title) {
             case "Home":
                 DisplayHomePage();
@@ -170,7 +204,7 @@ Date Completed: [2023-02-02]
         /**********************************
             Simple DOM Manipulation 3.C) 
         **********************************/
-         // Get reference to the ul element
+        // Get reference to the ul element
         var navbar = document.querySelector(".navbar-nav");
 
         // Create the new li element

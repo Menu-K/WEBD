@@ -6,6 +6,12 @@ body {
   margin: 0;
   padding: 0;
 }
+img {
+	width: 600px;
+	height: 400px;
+	display: block;
+	margin: 0 auto;
+}
 
 #page {
   background-color: #403c3b;
@@ -101,7 +107,7 @@ li {
 .complete {
   background-color: #999;
   color: #fff;
-  background-image: url("../images/icon-trash.png");
+  background-image: url("");
   background-position: center, right;
   background-repeat: no-repeat;
   border-top: 1px solid #666;
@@ -111,7 +117,7 @@ li {
 li a {
   color: #fff;
   text-decoration: none;
-  background-image: url("../images/icon-link.png");
+  background-image: url("");
   background-position: center, right;
   background-repeat: no-repeat;
   padding-right: 36px;
@@ -167,7 +173,7 @@ p {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   h1 {
-    background-image: url(../images/kinglogo.png);
+    background-image: url();
     background-size: 72px 72px;
   }
 }
