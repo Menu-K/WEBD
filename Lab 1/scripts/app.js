@@ -65,38 +65,47 @@
     function DisplayContactPage() {
         console.log("Contact Page");
         document.getElementById("submitBtn").addEventListener("click", function (event) {
-            var name = document.getElementById("name").value;
-            var contactNumber = document.getElementById("contactNumber").value;
-            var email = document.getElementById("email").value;
-            var isValid = true;
+            // Variables
+            let name = document.getElementById("name").value;
+            let contactNumber = document.getElementById("contactNumber").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
 
+            let nameError = document.getElementById("nameError");
+            let contactNumberError = document.getElementById("contactNumberError");
+            let emailError = document.getElementById("emailError");
+
+            let isValid = true;
+
+            // Name Validation
             if (!name) {
-                document.getElementById("nameError").style.display = "block";
-                isValid = false;
-            }
-            else {
-                document.getElementById("nameError").style.display = "none";
-            }
-
-            if (!contactNumber || contactNumber.length != 10) {
-                document.getElementById("contactNumberError").style.display = "block";
+                nameError.style.display = "block";
                 isValid = false;
             } else {
-                document.getElementById("contactNumberError").style.display = "none";
+                nameError.style.display = "none";
             }
-
-            if (!email) {
-                document.getElementById("emailError").style.display = "block";
+            // Contact Number Validation
+            if (isNaN(contactNumber) || contactNumber.length !== 10) {
+                contactNumberError.style.display = "block";
                 isValid = false;
             } else {
-                document.getElementById("emailError").style.display = "none";
+                contactNumberError.style.display = "none";
             }
+            // Email Validation
+            if (!email || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                emailError.style.display = "block";
+                isValid = false;
+            } else {
+                emailError.style.display = "none";
+            }
+
 
             if (isValid) {
                 // Output user information to console
-                console.log("Name: " + name);
+                console.log("Name: " + document.getElementById("name").value);
                 console.log("Contact Number: " + contactNumber);
                 console.log("Email: " + email);
+                console.log("Message: " + document.getElementById("message").value);
 
                 // Start 3 second timer
                 setTimeout(function () {
