@@ -105,7 +105,7 @@ Images relating to my interest, was taken from the weeb
             {
                 title: 'Custom Programming',
                 description: 'I offer custom programming services to help clients bring their ideas to life. Whether its a desktop application, a mobile app, or a web-based solution, I have the skills and experience to deliver.',
-                image: './images/customProgramming.jpg'
+                image: './images/customProg.jpg'
 
             }
         ];
