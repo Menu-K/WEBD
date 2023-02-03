@@ -8,3 +8,4 @@ COURSE ID:  WEBD6201-06
 Work on: 
 - About us Page
 - Slides
+- footer 
