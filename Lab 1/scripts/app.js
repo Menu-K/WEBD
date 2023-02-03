@@ -10,7 +10,7 @@ Images relating to my interest, was taken from the weeb
 (function () {
 
     // The DisplayHomePage function is called when the home page loads
-    function DisplayHomePage() {
+    function displayHomePage() {
         console.log("Home Page"); // log to the console that the home page has loaded
 
         // Get the About Us button element by its id
@@ -28,7 +28,7 @@ Images relating to my interest, was taken from the weeb
 
 
     // This function creates a product section and displays the information of each product in it. 
-    function DisplayProductsPage() {
+    function displayProductsPage() {
         // Get the Products link
         var productsLink = document.getElementById("products");
 
@@ -72,10 +72,8 @@ Images relating to my interest, was taken from the weeb
     }
 
 
-
-
     // DisplayServicesPage() - A function that displays information about the services
-    function DisplayServicesPage() {
+    function displayServicesPage() {
         console.log("Services Page");
 
         // Array of service objects with title, description and image properties
@@ -115,7 +113,7 @@ Images relating to my interest, was taken from the weeb
 
 
     // Display About Page
-    function DisplayAboutPage() {
+    function displayAboutPage() {
         console.log("About Page");
     }
 
@@ -124,7 +122,7 @@ Images relating to my interest, was taken from the weeb
                 Contact Form  
     **********************************/
     // Function to display contact page
-    function DisplayContactPage() {
+    function displayContactPage() {
         console.log("Contact Page");
         // Event listener for submit button click
         document.getElementById("submitBtn").addEventListener("click", function (event) {
@@ -190,21 +188,38 @@ Images relating to my interest, was taken from the weeb
         // switch statement to determine which page is currently loaded
         switch (document.title) {
             case "Home":
-                DisplayHomePage();
+                displayHomePage();
                 break;
             case "Our Products":
-                DisplayProductsPage();
+                displayProductsPage();
                 break;
             case "Our Services":
-                DisplayServicesPage();
+                displayServicesPage();
                 break;
             case "About Us":
-                DisplayAboutPage();
+                displayAboutPage();
                 break;
             case "Contact Us":
-                DisplayContactPage();
+                displayContactPage();
                 break;
         }
+        // Footer Nav bar
+        // set the navbar to be fixed to the bottom of the page
+        document.getElementById("footNav").style.position = "fixed";
+        document.getElementById("footNav").style.bottom = "0";
+
+        // set the width and background color of the navbar
+        document.getElementById("footNav").style.width = "100%";
+        document.getElementById("footNav").style.backgroundColor = "#333";
+
+        // set the text color and font size of the copyright statement
+        document.getElementById("footNav").style.color = "#fff";
+        document.getElementById("footNav").style.fontSize = "16px";
+
+        // create and display the current date for the copyright statement
+        const currentDate = new Date();
+        const copyrightStatement = "Copyright " + currentDate.getFullYear();
+        document.getElementById("footNav").innerHTML = copyrightStatement;
 
 
         /**********************************
