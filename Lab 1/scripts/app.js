@@ -98,15 +98,17 @@ Images relating to my interest, was taken from the weeb
 
             }
         ];
+        // Selecting the element with ID "services-container"
         const servicesContainer = document.querySelector('#services-container');
 
+        // Loop through the services array and add the service title, description, and image to the services container
         for (let i = 0; i < services.length; i++) {
             let service = services[i];
             servicesContainer.innerHTML += `
-            <h2>${service.title}</h2>
-            <p>${service.description}</p>
-            <img src="${service.image}" alt="${service.title}">
-            `;
+        <h2>${service.title}</h2>
+        <p>${service.description}</p>
+        <img src="${service.image}" alt="${service.title}">
+        `;
         }
     }
 
@@ -180,9 +182,11 @@ Images relating to my interest, was taken from the weeb
     }
 
 
-    // named function option
+    // Start function to determine which page is currently loaded
     function Start() {
-        console.log("App Started!");
+        console.log("App Started!"); // log a message to indicate the start of the app
+
+        // switch statement to determine which page is currently loaded
         switch (document.title) {
             case "Home":
                 DisplayHomePage();
@@ -200,6 +204,8 @@ Images relating to my interest, was taken from the weeb
                 DisplayContactPage();
                 break;
         }
+
+
         /**********************************
             Simple DOM Manipulation 3.C) 
         **********************************/
