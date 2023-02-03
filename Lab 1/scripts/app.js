@@ -2,6 +2,9 @@
 Author: [Menushan Karunakaran]
 Student ID: [100709847]
 Date Completed: [2023-02-02]
+
+Image Courtesy to unsplash.com
+Images relating to my interest, was taken from the weeb
 */
 
 (function () {
