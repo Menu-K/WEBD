@@ -25,7 +25,7 @@ img {
 
 /* Responsive page rules at bottom of style sheet */
 .bg-img {
- 	background-image:  url(../images/apocalypse.jpg);
+ 	background-image:  url(../images/sriLanka.jpg);
  	background-size: cover;
  	height: 100vh;
  	display: flex;
@@ -71,6 +71,18 @@ h2 span {
   width: 20px;
   margin-left: 5px;
   padding: 4px 0 0 4px;
+}
+h4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 70px;
+  font-size: 32px;
+  color: #000;
+
+
 }
 
 ul {

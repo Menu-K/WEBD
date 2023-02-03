@@ -9,32 +9,21 @@ Images relating to my interest, was taken from the weeb
 
 (function () {
 
+    // The DisplayHomePage function is called when the home page loads
     function DisplayHomePage() {
-        console.log("Home Page");
+        console.log("Home Page"); // log to the console that the home page has loaded
+
+        // Get the About Us button element by its id
         let AboutUsButton = document.getElementById("AboutUsButton");
+
+        // Add a click event listener to the About Us button
         AboutUsButton.addEventListener("click", function () {
+            // When the About Us button is clicked, navigate to the about.html page
             location.href = "about.html";
         });
 
-        // Step 1. get an entry point(s) (insertion point / deletion point) reference 
-        let DocumentBody = document.body;
-        let MainContent = document.getElementsByTagName("main")[0];
-
-        // Step 2. create an element(s) to insert
-        let MainParagraph = document.createElement("p");
-        let Article = document.createElement("article");
-        let ArticleParagraph = `<p id="ArticleParagraph" class ="mt-3">This is the Article Paragraph</p>`
-
-        // Step 3. configure the new element
-        MainParagraph.setAttribute("id", "MainParagraph");
-        MainParagraph.setAttribute("class", "mt-3");
-        MainParagraph.textContent = "This is the Main Paragraph";
-        Article.setAttribute("class", "container");
-
-        // Step 4. Add / Insert the new element
-        MainContent.appendChild(MainParagraph);
-        Article.innerHTML = ArticleParagraph;
-        DocumentBody.appendChild(Article);
+        // Get the element with id "fun-fact" and set its inner HTML to the fun fact message
+        document.getElementById("fun-fact").innerHTML = "Fun Fact: This is from Sri Lanka";
     }
 
 
