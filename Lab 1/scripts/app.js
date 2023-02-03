@@ -23,7 +23,7 @@ Images relating to my interest, was taken from the weeb
         });
 
         // Get the element with id "fun-fact" and set its inner HTML to the fun fact message
-        document.getElementById("fun-fact").innerHTML = "Fun Fact: This is from Sri Lanka";
+        document.getElementById("fun-fact").innerHTML = "Fun Fact: This is from Sri Lanka [Nuwara Eliya]";
     }
 
 
@@ -172,6 +172,7 @@ Images relating to my interest, was taken from the weeb
                 console.log("Email: " + email);
                 console.log("Message: " + document.getElementById("message").value);
 
+                // Courtesy to [https://stackoverflow.com/questions/10312963/difference-between-settimeout-with-and-without-quotes-and-parentheses]
                 // Start 3 second timer
                 setTimeout(function () {
                     // Redirect back to Home Page (index.html)
