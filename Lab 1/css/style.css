@@ -6,6 +6,11 @@ body {
   margin: 0;
   padding: 0;
 }
+.container {
+  margin: 0 auto;
+  padding:0px;
+  text-align: left;
+}
 img {
 	width: 600px;
 	height: 400px;
