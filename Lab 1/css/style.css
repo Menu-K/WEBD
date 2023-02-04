@@ -13,7 +13,7 @@ body {
 }
 img {
 	width: 600px;
-	height: 400px;
+	height: 500px;
 	display: block;
 	margin: 0 auto;
 }
@@ -105,7 +105,12 @@ li {
   padding-left: 1em;
   padding-top: 5px;
 }
+.product img {
+  width: 200px;
+  padding: 3in;
+  height:100px;
 
+}
 .form-container {
   width: 500px;
   margin: auto;
@@ -150,6 +155,29 @@ p {
   min-width: 20%;
   max-width: 80%;
 }
+
+#about-us-container {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.section-text {
+  width: 80%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
 
 #scriptResults {
   padding-bottom: 10px;
