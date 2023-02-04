@@ -8,7 +8,6 @@ Images relating to my interest, was taken from the weeb
 */
 
 (function () {
-
     // The DisplayHomePage function is called when the home page loads
     function displayHomePage() {
         console.log("Home Page"); // log to the console that the home page has loaded
@@ -27,9 +26,9 @@ Images relating to my interest, was taken from the weeb
             "Fun Fact: This is from Sri Lanka [Nuwara Eliya]";
     }
 
-
     // This function creates a product section and displays the information of each product in it.
-    function displayProductsPage() {
+    function displayProductsPage()
+    {
         // Get the Products link
         var productsLink = document.getElementById("products");
 
@@ -37,11 +36,12 @@ Images relating to my interest, was taken from the weeb
         productsLink.innerHTML = "Interests";
 
         // An array that holds the information of each product.
-        const products = [
+        const products =[
             {
                 title: "Harry Potter",
                 description: ` Harry Potter is a series of seven fantasy novels written by British author J.K. Rowling. The story follows a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, who are students at Hogwarts School of Witchcraft and Wizardry. Together, they explore the magical world, fight against the evil Lord Voldemort and his followers, the Death Eaters, and uncover the truth about Harry's past. The series has become one of the best-selling book series in history and has been adapted into a successful film franchise.`,
-                image: "./images/harryPotter.jpg",
+                image: "./images/harryPotter.jpg"
+
             },
             {
                 title: "The Last of Us",
@@ -59,7 +59,8 @@ Images relating to my interest, was taken from the weeb
         const productSection = document.querySelector("#product-section");
 
         // Loop through the products array
-        for (let i = 0; i < products.length; i++) {
+        for (let i = 0; i < products.length; i++)
+        {
             let product = products[i];
 
             // Append each product to the product section
@@ -72,7 +73,6 @@ Images relating to my interest, was taken from the weeb
             `;
         }
     }
-
 
     // DisplayServicesPage() - A function that displays information about the services
     function displayServicesPage() {
@@ -113,7 +113,6 @@ Images relating to my interest, was taken from the weeb
         }
     }
 
-
     // displayAboutPage() - A function to display information about the "About Us" page
     function displayAboutPage() {
         console.log("About Page");
@@ -127,18 +126,24 @@ Images relating to my interest, was taken from the weeb
             <img src="./images/you2.jpg" alt="Image 2">
             <img src="./images/pet.jpg" alt="Image 3">
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>My name is Menushan Karunakaran, due to reasons, studying for Computer Programmer Diploma. I live all the way in Markham while I go to school at Durham College, Oshawa. As you can see with the pictures above, 
+         I seem to be in to fashion when I just like to wear clothes that I believe look nice. The other picture you see is my brat of a sister of a dog named "Fanta". I am the only boy of 3 (4 including my dog) girl siblings.
+         I have got a older sister named "Thanusha", a twin sister "Minusha" and a baby sister named "Risza". My parents are Sri Lankan, born there and all of us kids were born here in Canada </p>
     </div>
     `;
 
         // Second section HTML
         const section2 = `
     <div id="section-2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>As you can see from the logo below, I love soccer and I spent a good part of my life playing it. My favourite sports are Soccer, Volleyball, Badminton, Ultimate frisbee and table tennis. I have the physique for basketball 
+        but I don't like it and despise it. I spent from grade 4 to grade 10 playing for Unionville Milliken Soccer Club for House League, but I also had the opportunity to play in REP(Representative) and train players
+        in that and All Star league. I also love to play video games and use it to relax which is very unhealthy. I am using the term video games vaguely because I love to play all types of games from Minecraft to 
+        horror games to pokemon etc. I grew up with pokemon and have a soft spot with it as well as Mario bros. As I grew older I had the opportunity to play semi pro for CounterStrike Global Offensive (CSGO) and 
+        the Call of Duty franchise. Growing older as come with its drawbacks and I now play games to enjoy myself and I can't keep up with these young'uns (old man joke). </p>
         <div class="images-container">
-            <img src="./image4.jpg" alt="Image 4">
-            <img src="./image5.jpg" alt="Image 5">
-            <img src="./image6.jpg" alt="Image 6">
+            <img src="./images/UMSC.png" alt="Image 4">
+            <img src="./images/csgo.jpg" alt="Image 5">
+            <img src="./images/fanta.jpg" alt="Image 6">
         </div>
     </div>
     `;
@@ -147,8 +152,8 @@ Images relating to my interest, was taken from the weeb
     }
 
     /**********************************
-                  Contact Form  
-      **********************************/
+                    Contact Form  
+        **********************************/
     // Function to display contact page
     function displayContactPage() {
         console.log("Contact Page");
@@ -185,7 +190,8 @@ Images relating to my interest, was taken from the weeb
                     contactNumberError.style.display = "none";
                 }
                 // Email Validation
-                if (!email ||
+                if (
+                    !email ||
                     !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
                 ) {
                     emailError.style.display = "block";
@@ -254,8 +260,8 @@ Images relating to my interest, was taken from the weeb
         document.getElementById("footNav").innerHTML = copyrightStatement;
 
         /**********************************
-                Simple DOM Manipulation 3.C) 
-            **********************************/
+                    Simple DOM Manipulation 3.C) 
+                **********************************/
         // Get reference to the ul element
         var navbar = document.querySelector(".navbar-nav");
 

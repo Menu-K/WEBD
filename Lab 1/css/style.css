@@ -106,9 +106,10 @@ li {
   padding-top: 5px;
 }
 .product img {
-  width: 200px;
-  padding: 3in;
-  height:100px;
+  width: auto;
+  padding: 1in;
+  height: auto;
+  box-sizing: content-box;
 
 }
 .form-container {
