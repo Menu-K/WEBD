@@ -4,7 +4,7 @@ Student ID: [100709847]
 Date Completed: [2023-02-02]
 
 Image Courtesy to unsplash.com
-Images relating to my interest, was taken from the weeb
+Images relating to my interest, was taken from the web
 */
 
 (function () {
@@ -244,7 +244,7 @@ Images relating to my interest, was taken from the weeb
 
         // set the navbar to be fixed to the bottom of the page
         document.getElementById("footNav").style.position = "fixed";
-        document.getElementById("footNav").style.bottom = "0";
+        document.getElementById("footNav").style.bottom = "1";
 
         // set the width and background color of the navbar
         document.getElementById("footNav").style.width = "100%";
@@ -260,8 +260,8 @@ Images relating to my interest, was taken from the weeb
         document.getElementById("footNav").innerHTML = copyrightStatement;
 
         /**********************************
-                    Simple DOM Manipulation 3.C) 
-                **********************************/
+            Simple DOM Manipulation 3.C) 
+        **********************************/
         // Get reference to the ul element
         var navbar = document.querySelector(".navbar-nav");
 
@@ -285,4 +285,4 @@ Images relating to my interest, was taken from the weeb
         navbar.insertBefore(navLi, aboutUsLi.nextSibling);
     }
     window.addEventListener("load", Start);
-})();
+    })();
