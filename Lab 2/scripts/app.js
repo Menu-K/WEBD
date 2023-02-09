@@ -243,6 +243,52 @@ Images relating to my interest, was taken from the web
             });
     }
 
+    function displayRegisterPage() {
+
+        $("#registerForm").submit(function (event) {
+            event.preventDefault();
+            let firstName = $("#firstName").val();
+            let lastName = $("#lastName").val();
+            let email = $("#email").val();
+            let password = $("#password").val();
+            let confirmPassword = $("#confirmPassword").val();
+
+            // Name Validations
+            if (firstName.length < 2) {
+                $("#ErrorMessage").show();
+                $("#ErrorMessage").text("First name must be at least 2 characters");
+                return false;
+            }
+            if (lastName.length < 2) {
+                $("#ErrorMessage").show();
+                $("#ErrorMessage").text("Last name must be at least 2 characters");
+                return false;
+            }
+
+            // Email Validations
+            if (email.length < 8 || email.indexOf("@") === -1) {
+                $("#ErrorMessage").show();
+                $("#ErrorMessage").text("Enter a valid email address");
+                return false;
+            }
+
+            // Password Validations
+            if (password.length < 6 || password !== confirmPassword) {
+                $("#ErrorMessage").show();
+                $("#ErrorMessage").text("Password must be at least 6 characters and match the confirm password");
+                return false;
+            }
+
+            // If all validation is successful, clear the error message and continue with form submit
+            $("#ErrorMessage").hide();
+            $("#ErrorMessage").text("");
+        });
+    }
+
+
+    function displayLoginPage() {
+
+    }
     // Start function to determine which page is currently loaded
     function Start() {
         console.log("App Started!"); // log a message to indicate the start of the app
@@ -263,6 +309,12 @@ Images relating to my interest, was taken from the web
                 break;
             case "Contact Us":
                 displayContactPage();
+                break;
+            case "Register":
+                displayRegisterPage();
+                break;
+            case "Login":
+                displayLoginPage();
                 break;
         }
         // Footer Nav bar

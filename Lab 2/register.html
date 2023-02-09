@@ -60,31 +60,43 @@ Date Completed: [2023-02-02]
             </div>
         </nav>
     </header>
-<form>
-    <div>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName">
+    <!-- Main Content -->
+    <title>Register</title>
+    <div class="d-flex align-items-center h-100">
+        <div class="container">
+            <div class="row">
+                <p class="text-center">Welcome to our website! Create your own account. It's free and only takes a
+                    minute</p>
+                <div class="col-md-12 text-center">
+                    <!-- form  -->
+                    <form id="registerForm">
+                        <div>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div>
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        <div id="ErrorMessage" style="display:none;"></div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName">
-    </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-    </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-    </div>
-    <div>
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword">
-    </div>
-    <button type="submit">Submit</button>
-</form>
-
-
 
 </body>
 
