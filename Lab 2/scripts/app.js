@@ -8,6 +8,33 @@ Images relating to my interest, was taken from the web
 */
 
 (function () {
+    /**********************************
+        Simple DOM Manipulation 3.C) 
+    **********************************/
+    // Get reference to the ul element
+    var navbar = document.querySelector(".navbar-nav");
+
+    // Create the new li element
+    var navLi = document.createElement("li");
+    navLi.classList.add("nav-item");
+
+    // Create the new a element
+    var navLink = document.createElement("a");
+    navLink.classList.add("nav-link");
+    navLink.href = "#";
+    navLink.innerHTML = '<i class="fas fa-user-friends"></i> Human Resources';
+
+    // Append the a element to the li element
+    navLi.appendChild(navLink);
+
+    // Get reference to the About Us li element
+    var aboutUsLi = document.querySelector(".nav-item:nth-child(4)");
+
+    // Insert the new li element after the About Us li element
+    navbar.insertBefore(navLi, aboutUsLi.nextSibling);
+
+
+
     // The DisplayHomePage function is called when the home page loads
     function displayHomePage() {
         console.log("Home Page"); // log to the console that the home page has loaded
@@ -27,8 +54,7 @@ Images relating to my interest, was taken from the web
     }
 
     // This function creates a product section and displays the information of each product in it.
-    function displayProductsPage()
-    {
+    function displayProductsPage() {
         // Get the Products link
         var productsLink = document.getElementById("products");
 
@@ -36,7 +62,7 @@ Images relating to my interest, was taken from the web
         productsLink.innerHTML = "Interests";
 
         // An array that holds the information of each product.
-        const products =[
+        const products = [
             {
                 title: "Harry Potter",
                 description: ` Harry Potter is a series of seven fantasy novels written by British author J.K. Rowling. The story follows a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, who are students at Hogwarts School of Witchcraft and Wizardry. Together, they explore the magical world, fight against the evil Lord Voldemort and his followers, the Death Eaters, and uncover the truth about Harry's past. The series has become one of the best-selling book series in history and has been adapted into a successful film franchise.`,
@@ -59,8 +85,7 @@ Images relating to my interest, was taken from the web
         const productSection = document.querySelector("#product-section");
 
         // Loop through the products array
-        for (let i = 0; i < products.length; i++)
-        {
+        for (let i = 0; i < products.length; i++) {
             let product = products[i];
 
             // Append each product to the product section
@@ -259,30 +284,6 @@ Images relating to my interest, was taken from the web
         const copyrightStatement = "Copyright " + currentDate.getFullYear();
         document.getElementById("footNav").innerHTML = copyrightStatement;
 
-        /**********************************
-            Simple DOM Manipulation 3.C) 
-        **********************************/
-        // Get reference to the ul element
-        var navbar = document.querySelector(".navbar-nav");
-
-        // Create the new li element
-        var navLi = document.createElement("li");
-        navLi.classList.add("nav-item");
-
-        // Create the new a element
-        var navLink = document.createElement("a");
-        navLink.classList.add("nav-link");
-        navLink.href = "#";
-        navLink.innerHTML = '<i class="fas fa-user-friends"></i> Human Resources';
-
-        // Append the a element to the li element
-        navLi.appendChild(navLink);
-
-        // Get reference to the About Us li element
-        var aboutUsLi = document.querySelector(".nav-item:nth-child(4)");
-
-        // Insert the new li element after the About Us li element
-        navbar.insertBefore(navLi, aboutUsLi.nextSibling);
     }
     window.addEventListener("load", Start);
-    })();
+})();

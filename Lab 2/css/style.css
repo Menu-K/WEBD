@@ -12,9 +12,8 @@ body {
   text-align: left;
 }
 img {
-	width: 600px;
-	height: 500px;
-	display: block;
+	max-height: 600px;
+  max-width: 400px;
 	margin: 0 auto;
 }
 
