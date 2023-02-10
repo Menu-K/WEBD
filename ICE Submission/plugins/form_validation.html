@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JQuery Validate Demo</title>
+		<!-- SRC attribute can be changed according to your preference or location of JS file -->
+		<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+		<style type="text/css"></style>
+		<link rel="stylesheet" href="./css/validate.css" />
+	</head>
+	<body>
+		<div class="container">
+			<form class="form" id="MyForm" method="get" action="" name="MyForm">
+				<fieldset>
+					<legend>Registration Form</legend>
+					<div class="row">
+						<label for="FName">First Name</label>
+						<input
+							id="FName"
+							name="FName"
+							type="text"
+							minlength="2"
+							required
+						/>
+					</div>
+					<div class="row">
+						<label for="LName">Last Name</label>
+						<input
+							id="LName"
+							name="LName"
+							type="text"
+							minlength="2"
+							required
+						/>
+					</div>
+					<div class="row">
+						<label for="Email">E-Mail</label>
+						<input id="Email" type="email" name="Email" required />
+					</div>
+					<div class="row">
+						<label for="Pwd">Password</label>
+						<input type="password" name="Pwd" id="Pwd" required />
+					</div>
+					<div class="row">
+						<label for="Cmt">Your comment</label>
+						<textarea id="Cmt" name="Cmt"></textarea>
+					</div>
+					<div class="row">
+						<input
+							class="registerbtn"
+							type="submit"
+							value="Register"
+						/>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<script src="./scripts/validate.js"></script>
+	</body>
+</html>
