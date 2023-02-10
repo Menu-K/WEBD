@@ -1,6 +1,6 @@
 console.log('app.js loaded')
 // TO DO: load the user class script with alias
-// import * as userClass from "./user.js"
+import * as userClass from "./user.js"
 // let newUser = new userClass.User("a", "b", "c", "d", "e");
 // console.log('newUser.displayUser());
 
@@ -103,48 +103,57 @@ if ($("speckled-excerpt")) {
 
 // FORM JQUERY
 // TO DO: import form validation functions with alias
-
+import * as formValidation from "./form.js";
 // if the submit button is on the page
-// if ($("#btnRegSubmit")) {
-// TO DO: add a click function that calls a callack function
-// $("#btnRegSubmit").click(function (e) {
-// prevent the default submit action (stay on the page)
+if ($("#btnRegSubmit")) {
+    // TO DO: add a click function that calls a callack function
+    $("#btnRegSubmit").click(function (e) {
+        // prevent the default submit action (stay on the page)
+        e.preventDefault();
+        // create a new user
+        // you normally wouldn't do this unless you had validated, but we're going to do it to show how class memebers work in calling the validation
+        const unvalidated_user = new userClass.User(
+            // get the first name input
+            $("#inputFIrst").val(),
 
-// create a new user
-// you normally wouldn't do this unless you had validated, but we're going to do it to show how class memebers work in calling the validation
+            // get the last name input
+            $("#inputLast").val(),
 
-// get the first name input
+            // get the username input
+            $("#inputUsername").val(),
 
-// get the last name input
+            // get the email input
+            $("#inputEmail").val(),
 
-// get the username input
+            // get the password input
+            $("#inputPassword").val()
+        );
 
-// get the email input
+        // debug statement for object
+        console.log(`UserDetails: ${unvalidated_user.displayUser()}`)
 
-// get the password input
+        // validate first name
+        $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
+        // validate last name
+        $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
 
+        // validate  username
+        $("#username-group").children(".errorMessage").html(formValidation.validateUsername(unvalidated_user.username));
 
-
-// debug statement for object
-// console.log(`UserDetails: ${user.displayUser()}`)
-
-// validate first name
-
-// validate last name
-
-// validate  username
-
-// validate confirm password
-
-// });
-// }
+        // validate confirm password
+        let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
+        $("#pass1-group").children(".errorMessage").html(error);
+    });
+}
 
 // TO DO: if reset button present
-
-// bind a click event handler
-
-// clear out all error message paragraphs
-
+if ($("#btnRegReset")) {
+    // TO DO: add a click function that calls a callack function
+    $("#btnRegReset").click(function (e) {
+        // clear out all error messages
+        $(".errorMessage").html("<p></p>");
+    });
+}
 
 
 
