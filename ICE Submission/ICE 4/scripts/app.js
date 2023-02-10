@@ -114,7 +114,7 @@ if ($("#btnRegSubmit")) {
         // you normally wouldn't do this unless you had validated, but we're going to do it to show how class memebers work in calling the validation
         const unvalidated_user = new userClass.User(
             // get the first name input
-            $("#inputFIrst").val(),
+            $("#inputFirst").val(),
 
             // get the last name input
             $("#inputLast").val(),
@@ -143,6 +143,7 @@ if ($("#btnRegSubmit")) {
         // validate confirm password
         let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
         $("#pass1-group").children(".errorMessage").html(error);
+        $("#pass2-group").children(".errorMessage").html(error);
     });
 }
 

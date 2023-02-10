@@ -20,11 +20,11 @@ $("#MyForm").validate();
 // 							required: true
 // 						}
 // 					},
-// 					// messages: {
-// 					// 	FName: "Please enter a valid First Name.",
-// 					// 	LName: "Please enter a valid Last Name.",
-// 					// 	Email: "Please enter Email in proper format.",
-// 					// 	Pwd: "Please enter a Password"
-// 					// }
+// 					messages: {
+// 						FName: "Please enter a valid First Name.",
+// 						LName: "Please enter a valid Last Name.",
+// 						Email: "Please enter Email in proper format.",
+// 						Pwd: "Please enter a Password"
+// 					}
 // 				});
 // 			});
