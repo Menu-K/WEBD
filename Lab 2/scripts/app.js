@@ -6,42 +6,9 @@ Date Completed: [2023-02-02]
 
 console.log("app.js loaded");
 // Imports
-import * as userClass from "./user.js";
-import * as formValidation from "./form.js"
-function displayRegisterPage()
-{
-    if ($("#btnRegSubmit")) {
-        $("#btnRegSubmit").click(function (e)
-        {
-            e.preventDefault();
-            const unvalidated_user = new userClass.User(
-                // get the first name input
-                $("#inputFirst").val(),
+//import * as userClass from "./user.js";
+//import * as formValidation from "./form.js";
 
-                // get the last name input
-                $("#inputLast").val(),
-
-                // get the email input
-                $("#inputEmail").val(),
-
-                // get the password input
-                $("#inputPassword").val()
-            );
-            // debug statement for object
-            console.log(`UserDetails: ${unvalidated_user.displayUser()}`)
-
-            // validate first name
-            $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
-            // validate last name
-            $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
-
-            // validate confirm password
-            let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
-            $("#pass1-group").children(".errorMessage").html(error);
-            $("#pass2-group").children(".errorMessage").html(error);
-        });
-    }
-}
 
 
 
@@ -321,23 +288,61 @@ function displayRegisterPage()
         }
         // Footer Nav bar
 
-        // set the navbar to be fixed to the bottom of the page
-        document.getElementById("footNav").style.position = "fixed";
-        document.getElementById("footNav").style.bottom = "1";
+        // Create a navbar element and add the necessary classes
+        const navbar = document.createElement("nav");
+        navbar.classList.add("navbar", "fixed-bottom", "bg-dark");
 
-        // set the width and background color of the navbar
-        document.getElementById("footNav").style.width = "100%";
-        document.getElementById("footNav").style.backgroundColor = "#333";
+        // Create a container element and add the necessary classes
+        const container = document.createElement("div");
+        container.classList.add("container-fluid");
 
-        // set the text color and font size of the copyright statement
-        document.getElementById("footNav").style.color = "#fff";
-        document.getElementById("footNav").style.fontSize = "16px";
+        // Create a copyright element and set its text to the current year
+        const copyright = document.createElement("p");
+        const currentYear = new Date().getFullYear();
+        const copyrightText = document.createTextNode(`Copyright © ${currentYear}`);
+        copyright.appendChild(copyrightText);
 
-        // create and display the current date for the copyright statement
-        const currentDate = new Date();
-        const copyrightStatement = "Copyright " + currentDate.getFullYear();
-        document.getElementById("footNav").innerHTML = copyrightStatement;
+        // Append the copyright element to the container
+        container.appendChild(copyright);
 
+        // Append the container to the navbar
+        navbar.appendChild(container);
+
+        // Add the navbar to the page
+        document.body.appendChild(navbar);
     }
     window.addEventListener("load", Start);
 })();
+
+function displayRegisterPage() {
+    if ($("#btnRegSubmit")) {
+        $("#btnRegSubmit").click(function (e) {
+            e.preventDefault();
+            const unvalidated_user = new userClass.User(
+                // get the first name input
+                $("#inputFirst").val(),
+
+                // get the last name input
+                $("#inputLast").val(),
+
+                // get the email input
+                $("#inputEmail").val(),
+
+                // get the password input
+                $("#inputPassword").val()
+            );
+            // debug statement for object
+            console.log(`UserDetails: ${unvalidated_user.displayUser()}`)
+
+            // validate first name
+            $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
+            // validate last name
+            $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
+
+            // validate confirm password
+            let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
+            $("#pass1-group").children(".errorMessage").html(error);
+            $("#pass2-group").children(".errorMessage").html(error);
+        });
+    }
+}

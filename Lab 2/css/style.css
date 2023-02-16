@@ -176,7 +176,13 @@ p {
   text-align: center;
   margin: 20px 0;
 }
-
+.container-fluid {
+  max-height: 50px;
+}
+.container-fluid p {
+  margin: 0;
+text-align: left;
+}
 
 
 #scriptResults {

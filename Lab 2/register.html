@@ -87,6 +87,7 @@ Date Completed: [2023-02-02]
                             <div class="errorMessage"></div>
                         </div>
 
+                        <!-- form group for email entry -->
                         <div class="form-row">
                             <div class="form-group col-md-6" id="email-group">
                                 <label for="inputEmail">Email</label>
@@ -109,7 +110,7 @@ Date Completed: [2023-02-02]
                                     placeholder="Password Again" required />
                                 <div class="errorMessage"></div>
                             </div>
-                            <button type="submit" class="btn btn-primary" id="btnRegSubmit">Register</button>
+                            <button type="submit" id="btnRegSubmit">Register</button>
                     </form>
                 </div>
             </div>
@@ -120,13 +121,8 @@ Date Completed: [2023-02-02]
 
 <!-- Scripting Section -->
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="./Scripts/app.js"></script>
-<script src="./Scripts/user.js"></script>
-<script src="./Scripts/form.js"></script>
+<script type="module" src="./Scripts/app.js"></script>
+<script type="module" src="./Scripts/user.js"></script>
+<script type="module" src="./Scripts/form.js"></script>
 </body>
-<footer>
-    <div class="container" id="footNav">
-    </div>
-</footer>
-
 </html>
