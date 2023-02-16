@@ -133,8 +133,8 @@ console.log("app.js loaded");
                 image: "./images/customProg.jpg",
             },
         ];
-        // Selecting the element with ID "services-container"
-        const servicesContainer = document.querySelector("#services-container");
+        // Selecting the element with ID "service-section"
+        const servicesContainer = document.querySelector("#service-section");
 
         // Loop through the services array and add the service title, description, and image to the services container
         for (let i = 0; i < services.length; i++) {
