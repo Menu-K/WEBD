@@ -37,8 +37,7 @@ import * as formValidation from "./form.js";
     // Insert the new li element after the About Us li element
     navbar.insertBefore(navLi, aboutUsLi.nextSibling);
 
-   // function displayLoginPage() {
-
+ 
  //   }
     // Start function to determine which page is currently loaded
     function Start() {
@@ -372,3 +371,16 @@ function displayRegisterPage() {
         });
     }
 }
+
+
+
+
+    /**********************************
+            Register Page  
+    **********************************/
+  // function displayLoginPage() {
+    displayLoginPage() {
+    // Get references to the navbar and login form elements
+    const navbar = $(".navbar-nav");
+    const loginForm = $("#loginForm");
+    }
