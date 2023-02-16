@@ -380,7 +380,6 @@ function displayRegisterPage() {
     **********************************/
   // function displayLoginPage() {
     displayLoginPage() {
-    // Get references to the navbar and login form elements
-    const navbar = $(".navbar-nav");
-    const loginForm = $("#loginForm");
-    }
+    // Select the Login button and add a click event listener to it
+    
+}
