@@ -4,8 +4,11 @@
  * @returns html element for error message
  */
 export function validateFirst(first) {
-    if (first.length < 2) {
-        return "<p>You have entered a first name that is too short.</p>"
+    if (first.length === 0) {
+        return "<p>First name is required.</p>"
+    }
+    else if (first.length < 3) {
+        return "<p>First name must be at least 3 characters long.</p>"
     }
     else {
         return "<p></p>";
@@ -18,8 +21,11 @@ export function validateFirst(first) {
  * @returns html element for error message
  */
 export function validateLast(last) {
-    if (last.length < 2) {
-        return "<p>You have entered a last name that is too short.</p>"
+    if (last.length === 0) {
+        return "<p>Last name is required.</p>"
+    }
+    else if (last.length < 3) {
+        return "<p>Last name must be at least 3 characters long.</p>"
     }
     else {
         return "<p></p>";

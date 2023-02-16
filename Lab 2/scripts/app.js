@@ -2,10 +2,51 @@
 Author: [Menushan Karunakaran]
 Student ID: [100709847]
 Date Completed: [2023-02-02]
-
-Image Courtesy to unsplash.com
-Images relating to my interest, was taken from the web
 */
+
+console.log("app.js loaded");
+// Imports
+import * as userClass from "./user.js";
+import * as formValidation from "./form.js"
+function displayRegisterPage()
+{
+    if ($("#btnRegSubmit")) {
+        $("#btnRegSubmit").click(function (e)
+        {
+            e.preventDefault();
+            const unvalidated_user = new userClass.User(
+                // get the first name input
+                $("#inputFirst").val(),
+
+                // get the last name input
+                $("#inputLast").val(),
+
+                // get the email input
+                $("#inputEmail").val(),
+
+                // get the password input
+                $("#inputPassword").val()
+            );
+            // debug statement for object
+            console.log(`UserDetails: ${unvalidated_user.displayUser()}`)
+
+            // validate first name
+            $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
+            // validate last name
+            $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
+
+            // validate confirm password
+            let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
+            $("#pass1-group").children(".errorMessage").html(error);
+            $("#pass2-group").children(".errorMessage").html(error);
+        });
+    }
+}
+
+
+
+
+
 
 (function () {
     /**********************************
@@ -37,7 +78,7 @@ Images relating to my interest, was taken from the web
 
     // The DisplayHomePage function is called when the home page loads
     function displayHomePage() {
-        console.log("Home Page"); // log to the console that the home page has loaded
+        console.log("Home Page loaded"); // log to the console that the home page has loaded
 
         // Get the About Us button element by its id
         let AboutUsButton = document.getElementById("AboutUsButton");
@@ -55,6 +96,7 @@ Images relating to my interest, was taken from the web
 
     // This function creates a product section and displays the information of each product in it.
     function displayProductsPage() {
+        console.log("Products Page loaded");
         // Get the Products link
         var productsLink = document.getElementById("products");
 
@@ -101,7 +143,7 @@ Images relating to my interest, was taken from the web
 
     // DisplayServicesPage() - A function that displays information about the services
     function displayServicesPage() {
-        console.log("Services Page");
+        console.log("Services Page loaded");
 
         // Array of service objects with title, description and image properties
         const services = [
@@ -140,7 +182,7 @@ Images relating to my interest, was taken from the web
 
     // displayAboutPage() - A function to display information about the "About Us" page
     function displayAboutPage() {
-        console.log("About Page");
+        console.log("About Page loaded");
         const aboutUsContainer = document.querySelector("#about-us-container");
 
         // First section HTML
@@ -181,7 +223,7 @@ Images relating to my interest, was taken from the web
         **********************************/
     // Function to display contact page
     function displayContactPage() {
-        console.log("Contact Page");
+        console.log("Contact Page loaded");
         // Event listener for submit button click
         document
             .getElementById("submitBtn")
@@ -243,10 +285,7 @@ Images relating to my interest, was taken from the web
             });
     }
 
-    function displayRegisterPage() {
 
-       
-    }
 
 
     function displayLoginPage() {

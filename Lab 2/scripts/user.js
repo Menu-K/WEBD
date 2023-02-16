@@ -5,34 +5,31 @@ Date Completed: [2023-02-09]
 
 */
 
-class User {
+export class User {
 
     /**
-     * 
-     * @param {*} firstName 
-     * @param {*} lastName 
-     * @param {*} username 
-     * @param {*} email 
-     * @param {*} password 
+     * User
+     * @param {string} firstName
+     * @param {string} lastName
+     * @param {string} username
+     * @param {string} email
+     * @param {string} password
      */
-    constructor(firstName, lastName, username, email, password) {
+    constructor(firstName, lastName, email, password) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.username = username;
+       // this.username = username;
         this.email = email;
         this.password = password;
     }
+
     /**
-     *
-     *
-     * @return {*} 
-     * @memberof User
+     * @property {function} displayUser Prints users details: user name, username, email, and password
+     * @returns {string}
      */
     displayUser() {
         return `Name: ${this.firstName}${this.lastName}
-        Username: ${ this.username }
-        Email: ${ this.email }
-        Password: ${ this.password }`
+         Email: ${this.email}
+         Password: ${this.password}`
     }
 }
-
