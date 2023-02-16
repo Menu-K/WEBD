@@ -337,7 +337,6 @@ function displayContactPage() {
                 Register Page  
     **********************************/
 function displayRegisterPage() {
-    $("errorMessage").blur();
     if ($("#btnRegSubmit")) {
         $("#btnRegSubmit").click(function (e) {
             e.preventDefault();
@@ -368,6 +367,7 @@ function displayRegisterPage() {
             let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
             $("#pass1-group").children(".errorMessage").html(error);
             $("#pass2-group").children(".errorMessage").html(error);
+            
             
         });
     }
