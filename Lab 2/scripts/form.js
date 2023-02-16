@@ -7,8 +7,8 @@ export function validateFirst(first) {
     if (first.length === 0) {
         return "<p>First name is required.</p>"
     }
-    else if (first.length < 3) {
-        return "<p>First name must be at least 3 characters long.</p>"
+    else if (first.length < 2) {
+        return "<p>First name must be at least 2 characters long.</p>"
     }
     else {
         return "<p></p>";
@@ -24,8 +24,8 @@ export function validateLast(last) {
     if (last.length === 0) {
         return "<p>Last name is required.</p>"
     }
-    else if (last.length < 3) {
-        return "<p>Last name must be at least 3 characters long.</p>"
+    else if (last.length < 2) {
+        return "<p>Last name must be at least 2 characters long.</p>"
     }
     else {
         return "<p></p>";
@@ -39,7 +39,7 @@ export function validateLast(last) {
  * @returns html element for error message
  */
 export function validateUsername(username) {
-if (username.length < 2) {
+    if (username.length < 2) {
         return "<p>You have entered a username that is too short.</p>"
     }
     else {
@@ -53,8 +53,12 @@ if (username.length < 2) {
  * @returns html element for error message
  */
 export function validateEmail(email) {
-if (email.length < 2) {
-        return "<p>You have entered a email that is too short.</p>"
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.length < 8) {
+        return "<p>Email must be at least 8 characters long.</p>"
+    }
+    else if (!emailRegex.test(email)) {
+        return "<p>You have entered an invalid email format.</p>";
     }
     else {
         return "<p></p>";
@@ -68,12 +72,13 @@ if (email.length < 2) {
  * @returns html element for error message
  */
 export function validatePassword(pass1, pass2) {
-    if (pass1 == pass2) {
-        return "<p></p>";
+    if (pass1 !== pass2) {
+        return "<p>Your passwords do not match.</p>";
+    } else if (pass1.length < 6) {
+        return "<p>Password must be at least 6 characters long.</p>";
     } else {
-        return "<p>Your passwords do not match.</p>"
+        return "<p></p>";
     }
-
 };
 
 
