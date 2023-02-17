@@ -379,7 +379,7 @@ function displayRegisterPage() {
             Register Page  
     **********************************/
   // function displayLoginPage() {
-    displayLoginPage() {
-    // Select the Login button and add a click event listener to it
+//    displayLoginPage() {
+//    // Select the Login button and add a click event listener to it
     
-}
+//}
