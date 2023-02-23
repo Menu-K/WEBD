@@ -378,8 +378,21 @@ function displayRegisterPage() {
     /**********************************
                 Login Page  
     **********************************/
-  function displayLoginPage() {
-          // Select the Login button and add a click event listener to it
+function displayLoginPage() {
+    $(document).ready(function () {
+        // Select the Login button and add a click event listener to it
+        $("#btnLogin").click(function (e) {
+            e.preventDefault();
 
-
+            // get the username from the form
+            var username = $("#username").val();
+            console.log("test 1");
+            // create the navbar text element
+            let navbarText = '<li class="nav-item navbar-text ms-3">' + username + '</li>';
+            console.log("test 2");
+            // insert the navbar text after the "Contact Us" link
+            $("#contact").after(navbarText);
+            console.log("test 3");
+        });
+    });
 }
