@@ -11,7 +11,7 @@ Date Completed: [2023-02-02]
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Register Page</title>
     <!-- CSS Section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
@@ -49,10 +49,11 @@ Date Completed: [2023-02-02]
                             Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                        <a class="nav-link" id="Register" href="register.html"><i class="fas fa-user-plus"></i>
+                            Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a class="nav-link" id="login" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +71,7 @@ Date Completed: [2023-02-02]
                     minute</p>
                 <div class="col-md-6 text-left">
                     <!-- form  -->
-                    <form id="registerForm">
+                    <form>
 
                         <!-- form group for first name entry -->
                         <div id="first-group">
@@ -91,7 +92,8 @@ Date Completed: [2023-02-02]
                         <div class="form-row">
                             <div class="form-group col-md-6" id="email-group">
                                 <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="jdoe@example.ca" required />
+                                <input type="email" class="form-control" id="inputEmail" placeholder="jdoe@example.ca"
+                                    required />
                                 <div class="errorMessage"></div>
                             </div>
 
@@ -127,5 +129,4 @@ Date Completed: [2023-02-02]
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </body>
-
 </html>

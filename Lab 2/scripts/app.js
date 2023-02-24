@@ -7,6 +7,7 @@ Date Completed: [2023-02-02]
 console.log("app.js loaded");
 // Imports
 import * as userClass from "./user.js";
+
 import * as formValidation from "./form.js";
 
 
@@ -37,34 +38,41 @@ import * as formValidation from "./form.js";
     // Insert the new li element after the About Us li element
     navbar.insertBefore(navLi, aboutUsLi.nextSibling);
 
- 
- //   }
+
+    //   }
     // Start function to determine which page is currently loaded
     function Start() {
         console.log("App Started!"); // log a message to indicate the start of the app
 
         // switch statement to determine which page is currently loaded
         switch (document.title) {
-            case "Home":
+            case "Home Page":
                 displayHomePage();
+                console.log("Register Page loaded");
                 break;
-            case "Our Products":
+            case "Product Page":
                 displayProductsPage();
+                console.log("Products Page loaded");
                 break;
-            case "Our Services":
+            case "Service Page":
                 displayServicesPage();
+                console.log("Service Page loaded");
                 break;
-            case "About Us":
+            case "About Page":
                 displayAboutPage();
+                console.log("About Page loaded");
                 break;
-            case "Contact Us":
+            case "Contact Page":
                 displayContactPage();
+                console.log("Contact Page loaded");
                 break;
-            case "Register":
+            case "Register Page":
                 displayRegisterPage();
+                console.log("Register Page loaded");
                 break;
-            case "Login":
+            case "Login Page":
                 displayLoginPage();
+                console.log("Login Page loaded");
                 break;
         }
 
@@ -103,13 +111,12 @@ import * as formValidation from "./form.js";
 
 
 
-    /**********************************
-                Home Page  
-    **********************************/
+/**********************************
+            Home Page  
+**********************************/
 // The DisplayHomePage function is called when the home page loads
 function displayHomePage() {
-    console.log("Home Page loaded"); // log to the console that the home page has loaded
-
+  
     // Get the About Us button element by its id
     let AboutUsButton = document.getElementById("AboutUsButton");
 
@@ -126,12 +133,11 @@ function displayHomePage() {
 
 
 
-    /**********************************
-            Products Page  
-    **********************************/
+/**********************************
+        Products Page  
+**********************************/
 // This function creates a product section and displays the information of each product in it.
 function displayProductsPage() {
-    console.log("Products Page loaded");
     // Get the Products link
     var productsLink = document.getElementById("products");
 
@@ -177,12 +183,11 @@ function displayProductsPage() {
 }
 
 
-    /**********************************
-            Services Page  
-    **********************************/
+/**********************************
+        Services Page  
+**********************************/
 // DisplayServicesPage() - A function that displays information about the services
 function displayServicesPage() {
-    console.log("Services Page loaded");
 
     // Array of service objects with title, description and image properties
     const services = [
@@ -220,12 +225,11 @@ function displayServicesPage() {
 }
 
 
-    /**********************************
-                About us Page  
-    **********************************/
+/**********************************
+            About us Page  
+**********************************/
 // displayAboutPage() - A function to display information about the "About Us" page
 function displayAboutPage() {
-    console.log("About Page loaded");
     const aboutUsContainer = document.querySelector("#about-us-container");
 
     // First section HTML
@@ -264,12 +268,11 @@ function displayAboutPage() {
 
 
 
-    /**********************************
-                Contact Form  
-    **********************************/
+/**********************************
+            Contact Form  
+**********************************/
 // Function to display contact page
 function displayContactPage() {
-    console.log("Contact Page loaded");
     // Event listener for submit button click
     document.getElementById("submitBtn").addEventListener("click", function (event) {
         // Variables to store user inputs
@@ -332,9 +335,9 @@ function displayContactPage() {
 
 
 
-    /**********************************
-                Register Page  
-    **********************************/
+/**********************************
+            Register Page  
+**********************************/
 function displayRegisterPage() {
     if ($("#btnRegSubmit")) {
         $("#btnRegSubmit").click(function (e) {
@@ -366,8 +369,8 @@ function displayRegisterPage() {
             let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
             $("#pass1-group").children(".errorMessage").html(error);
             $("#pass2-group").children(".errorMessage").html(error);
-            
-            
+
+
         });
     }
 }
@@ -375,24 +378,28 @@ function displayRegisterPage() {
 
 
 
-    /**********************************
-                Login Page  
-    **********************************/
+/**********************************
+            Login Page  
+**********************************/
 function displayLoginPage() {
-    $(document).ready(function () {
-        // Select the Login button and add a click event listener to it
-        $("#btnLogin").click(function (e) {
-            e.preventDefault();
 
-            // get the username from the form
-            var username = $("#username").val();
-            console.log("test 1");
-            // create the navbar text element
-            let navbarText = '<li class="nav-item navbar-text ms-3">' + username + '</li>';
-            console.log("test 2");
+    // Add a click event listener to the Login button
+    if ($("#btnLogin")) {
+        $("#btnLogin").click(function (e) {
+            e.preventDefault(); // prevent the default form submission behavior
+
+            var username = $("#username").val()
+            // check if the username input is empty
+            if (username === "") {
+                alert("Please enter a username."); 
+                return;
+            }
+
+            // create the navbar text element with the username value
+            let navbarText = '<li class="nav-item navbar-text mx-3">' + username + '</li>';
+
             // insert the navbar text after the "Contact Us" link
-            $("#contact").after(navbarText);
-            console.log("test 3");
+            $("#navLoginName").after(navbarText);
         });
-    });
+    }
 }
