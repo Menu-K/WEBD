@@ -339,6 +339,15 @@ function displayContactPage() {
             Register Page  
 **********************************/
 function displayRegisterPage() {
+
+    // https://stackoverflow.com/questions/4113965/css-selector-for-text-input-fields
+    // thanks overflow
+    // Select all text fields and password fields using the attribute selector
+    $("input[type='text'], input[type='password']").each(function() {
+        // Insert a new div element after the current text field element
+        $(this).after("<div id='errorMessage'></div>");
+      });
+      
     if ($("#btnRegSubmit")) {
         $("#btnRegSubmit").click(function (e) {
             e.preventDefault();
@@ -359,16 +368,16 @@ function displayRegisterPage() {
             console.log(`UserDetails: ${unvalidated_user.displayUser()}`)
 
             // validate first name
-            $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
+            $("#first-group").children("#errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
             // validate last name
-            $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
+            $("#last-group").children("#errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
 
             // validate email
-            $("#email-group").children(".errorMessage").html(formValidation.validateEmail(unvalidated_user.email));
+            $("#email-group").children("#errorMessage").html(formValidation.validateEmail(unvalidated_user.email));
             // validate confirm password
             let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
-            $("#pass1-group").children(".errorMessage").html(error);
-            $("#pass2-group").children(".errorMessage").html(error);
+            $("#pass1-group").children("#errorMessage").html(error);
+            $("#pass2-group").children("#errorMessage").html(error);
 
 
         });
