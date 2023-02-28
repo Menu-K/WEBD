@@ -7,9 +7,9 @@ Date Completed: [2023-02-24]
 console.log("app.js loaded");
 // Imports
 import * as userClass from "./user.js";
-
+console.log("user.js loaded");
 import * as formValidation from "./form.js";
-
+console.log("form.js loaded");
 
 
 (function () {
@@ -343,7 +343,7 @@ function displayRegisterPage() {
     // https://stackoverflow.com/questions/4113965/css-selector-for-text-input-fields
     // thanks overflow
     // Select all text fields and password fields using the attribute selector
-    $("input[type='text'], input[type='password']").each(function() {
+    $("input[type='text'], input[type='password'], input[type='email']").each(function() {
         // Insert a new div element after the current text field element
         $(this).after("<div id='errorMessage'></div>");
       });
