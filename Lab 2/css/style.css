@@ -202,9 +202,17 @@ p {
   text-align: left;
 }
 
-
 #scriptResults {
   padding-bottom: 10px;
+}
+#blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin-bottom: 20px;
 }
 
 
