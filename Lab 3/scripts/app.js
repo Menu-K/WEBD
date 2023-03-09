@@ -4,14 +4,12 @@ Student ID: [100709847]
 Date Completed: [2023-02-24]
 */
 
-console.log("app.js loaded");
 // Imports
 import * as userClass from "./user.js";
 console.log("user.js loaded");
 import * as formValidation from "./form.js";
 console.log("form.js loaded");
-import * as displayBlog from "./blog.js";
-console.log("blog.js loaded");
+
 
 (function () {
     /**********************************
@@ -49,7 +47,7 @@ console.log("blog.js loaded");
         switch (document.title) {
             case "Home Page":
                 displayHomePage();
-                console.log("Register Page loaded");
+                console.log("Home Page loaded");
                 break;
             case "Product Page":
                 displayProductsPage();
@@ -77,7 +75,7 @@ console.log("blog.js loaded");
                 break;
             case "Blog Page":
                 displayBlogPage();
-                console.log("Blog Loaded");
+                console.log("Blog Page Loaded");
                 break;
         }
 
@@ -341,7 +339,7 @@ function displayContactPage() {
 /**********************************
             Blog Page  
 **********************************/
-
+import * as displayBlog from "./blog.js";
 function displayBlogPage(){
     // Display Blog Page
     
