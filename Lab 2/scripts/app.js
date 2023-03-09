@@ -10,7 +10,8 @@ import * as userClass from "./user.js";
 console.log("user.js loaded");
 import * as formValidation from "./form.js";
 console.log("form.js loaded");
-
+import * as displayBlog from "./blog.js";
+console.log("blog.js loaded");
 
 (function () {
     /**********************************
@@ -73,6 +74,10 @@ console.log("form.js loaded");
             case "Login Page":
                 displayLoginPage();
                 console.log("Login Page loaded");
+                break;
+            case "Blog":
+                displayBlogPage();
+                console.log("Blog Loaded");
                 break;
         }
 
@@ -332,6 +337,15 @@ function displayContactPage() {
     });
 }
 
+/**********************************
+            Blog Page  
+**********************************/
+
+function displayBlogPage(){
+    // Display Blog Page
+}
+
+
 
 
 
@@ -412,3 +426,6 @@ function displayLoginPage() {
         });
     }
 }
+
+
+
