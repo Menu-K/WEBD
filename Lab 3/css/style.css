@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+html {
+    min-height: 100%;
+    background-color: #212529;
+    color: #edede9;
+}
+
+body {
+  font-family: "Roboto", "Mono", sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #a3cef1;
+  color: #000;
+  line-height: 1.5;
+}
+header {
+  text-align: center;
+  padding: 20px;
+}
+/** a3cef1 */
+nav {
+  background-color: #a3cef1;
+  overflow: hidden;
+}
+nav a {
+  float: left;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of the links on hover */
+nav a:hover {
+  background-color: #a3cef1;
+  color: black;
+}
+
+/* Style the active link */
+nav a.active {
+  background-color: #333;
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.container h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+
+.container p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin: 8px;
+  padding: 6px 12px;
+  outline: none;
+  border: 1px solid #666;
+  border-radius: 4px;
+  box-shadow: inset 0 0 3px 3px #fafafa;
+}
+img {
+	max-height: 600px;
+  max-width: 400px;
+	margin: 0 auto;
+  align-items: center;
+}
+
+
+/* Responsive page rules at bottom of style sheet */
+.bg-img {
+  margin-top: 5%;
+ 	background-image:  url(../images/sriLanka.jpg);
+ 	background-size: cover;
+ 	height: 100vh;
+  z-index: 1;
+  position: relative;
+ 	display: block;
+ 	align-items: center;
+ }
+
+.welcome-text {
+ 	color: white;
+ 	font-size: 36px;
+ 	text-shadow: 1px 1px black;
+ }
+
+h1 {
+  font-family: "Roboto", "Mono", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #a3cef1;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0 0 23px 0;
+}
+
+h4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 70px;
+  font-size: 32px;
+  color: #000;
+
+
+}
+.form-container {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+.complete {
+  background-color: #999;
+  color: #fff;
+  background-image: url("");
+  background-position: center, right;
+  background-repeat: no-repeat;
+  border-top: 1px solid #666;
+  text-shadow: 2px 2px 1px #333;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  background-image: url("");
+  background-position: center, right;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+p {
+  border-radius: 10%;
+  border: red;
+}
+
+#about-us-container {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images-container img {
+  width: auto;
+  height: auto;
+}
+
+.section-text {
+  width: 80%;
+  text-align: center;
+  margin: 20px 0;
+}
+.container-fluid {
+  max-height: 30px;
+}
+.container-fluid p {
+  max-height: 30px;
+  margin: 0;
+  padding-bottom: 5%;
+  text-align: left;
+}
+
+
+.container h1 {
+  font-family: "Roboto", "Mono", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}

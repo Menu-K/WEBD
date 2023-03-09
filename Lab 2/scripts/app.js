@@ -10,8 +10,7 @@ import * as userClass from "./user.js";
 console.log("user.js loaded");
 import * as formValidation from "./form.js";
 console.log("form.js loaded");
-import * as displayBlog from "./blog.js";
-console.log("blog.js loaded");
+
 
 (function () {
     /**********************************
@@ -75,10 +74,6 @@ console.log("blog.js loaded");
                 displayLoginPage();
                 console.log("Login Page loaded");
                 break;
-            case "Blog Page":
-                displayBlogPage();
-                console.log("Blog Loaded");
-                break;
         }
 
         // Footer Nav bar
@@ -96,7 +91,6 @@ console.log("blog.js loaded");
         const currentYear = new Date().getFullYear();
         const copyrightText = document.createTextNode(`Copyright © ${currentYear}`);
         copyright.appendChild(copyrightText);
-        copyright.style.color = "#fff";
 
         // Append the copyright element to the container
         container.appendChild(copyright);
@@ -338,16 +332,6 @@ function displayContactPage() {
     });
 }
 
-/**********************************
-            Blog Page  
-**********************************/
-
-function displayBlogPage(){
-    // Display Blog Page
-    
-}
-
-
 
 
 
@@ -428,6 +412,3 @@ function displayLoginPage() {
         });
     }
 }
-
-
-
