@@ -202,17 +202,18 @@ p {
   text-align: left;
 }
 
-#scriptResults {
-  padding-bottom: 10px;
-}
-#blog-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.post {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
-.card {
-  margin-bottom: 20px;
+.post h2 {
+  margin-top: 0;
+}
+
+.post p {
+  margin-bottom: 0;
 }
 
 

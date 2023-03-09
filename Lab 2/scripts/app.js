@@ -75,7 +75,7 @@ console.log("blog.js loaded");
                 displayLoginPage();
                 console.log("Login Page loaded");
                 break;
-            case "Blog":
+            case "Blog Page":
                 displayBlogPage();
                 console.log("Blog Loaded");
                 break;
@@ -343,6 +343,7 @@ function displayContactPage() {
 
 function displayBlogPage(){
     // Display Blog Page
+    
 }
 
 
