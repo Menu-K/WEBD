@@ -1,7 +1,11 @@
 const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 const API_KEY = '34270048-f084a7934d6a57c317aee8d09';
-const IMAGE_URL = `https://pixabay.com/api/?key=${API_KEY}&q=landscape&orientation=horizontal`;
-const postsContainer = document.getElementById('blog-container');
+const IMAGE_URL = 'https://pixabay.com/api/?key=<KEY>&q=foggy+forests&image_type=photo&per_page=20';
+const url = IMAGE_URL.replace('<KEY>', API_KEY);
+
+
+// DOM elements
+const blogContainer = document.getElementById('blog-container');
 
 
 fetch(API_URL)

@@ -27,8 +27,8 @@ const makePosts = () => {
 const getPictures = () => {
 
 
-    PIXABAY_KEY = 'f084a7934d6a57c317aee8d09';
-    PIXABAY_URL = "https://pixabay.com/api/?key=<KEY>&q=foggy+sunsets&image_type=photo&per_page=30"
+    PIXABAY_KEY = '34270048-f084a7934d6a57c317aee8d09';
+    PIXABAY_URL = 'https://pixabay.com/api/?key=<KEY>&q=foggy+sunsets&image_type=photo&per_page=30';
     const url = PIXABAY_URL.replace('<KEY>', PIXABAY_KEY);
     console.log(`URL: ${url}`);    
 
