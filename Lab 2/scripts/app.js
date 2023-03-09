@@ -96,6 +96,7 @@ console.log("blog.js loaded");
         const currentYear = new Date().getFullYear();
         const copyrightText = document.createTextNode(`Copyright © ${currentYear}`);
         copyright.appendChild(copyrightText);
+        copyright.style.color = "#fff";
 
         // Append the copyright element to the container
         container.appendChild(copyright);
