@@ -13,22 +13,22 @@ fetch(API_URL)
   .then(response => response.json())
   .then(posts => {
     // Fetch images from Pixabay
-    fetch(IMAGE_URL)
-      .then(response => response.json())
-      .then(images => {
+    //fetch(IMAGE_URL)
+      //.then(response => response.json())
+      //.then(images => {
         // Create a blog card for each post
         for (let i = 0; i < posts.length; i++) {
           const post = posts[i];
-          const image = images.hits[i];
+        //  const image = images.hits[i];
 
           // Create card elements
           const card = document.createElement('div');
           card.classList.add('card', 'mb-3');
 
-          const imageElement = document.createElement('img');
-          imageElement.classList.add('card-img-top');
-          imageElement.src = image.webformatURL;
-          imageElement.alt = `Image for post ${i + 1}`;
+          // const imageElement = document.createElement('img');
+          // imageElement.classList.add('card-img-top');
+          // imageElement.src = image.webformatURL;
+          // imageElement.alt = `Image for post ${i + 1}`;
 
           const cardBody = document.createElement('div');
           cardBody.classList.add('card-body');
@@ -42,7 +42,7 @@ fetch(API_URL)
           content.textContent = post.body;
 
           // Append elements to card
-          card.appendChild(imageElement);
+          //card.appendChild(imageElement);
           card.appendChild(cardBody);
           cardBody.appendChild(title);
           cardBody.appendChild(content);
@@ -50,5 +50,5 @@ fetch(API_URL)
           // Append card to container
           blogContainer.appendChild(card);
         }
-      });
+      //});
   });

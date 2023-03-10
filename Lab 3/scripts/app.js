@@ -73,10 +73,6 @@ console.log("form.js loaded");
                 displayLoginPage();
                 console.log("Login Page loaded");
                 break;
-            case "Blog Page":
-                displayBlogPage();
-                console.log("Blog Page Loaded");
-                break;
         }
 
         // Footer Nav bar
@@ -336,14 +332,8 @@ function displayContactPage() {
     });
 }
 
-/**********************************
-            Blog Page  
-**********************************/
-import * as displayBlog from "./blog.js";
-function displayBlogPage(){
-    // Display Blog Page
-    
-}
+
+
 
 
 
