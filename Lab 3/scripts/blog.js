@@ -1,3 +1,10 @@
+// Author: [Menushan Karunakaran]
+// Student ID: [100709847]
+// Date Completed: [2023-03-14]
+
+
+
+// Set the API URLs and key
 const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 const API_KEY = '34270048-f084a7934d6a57c317aee8d09';
 const IMAGE_URL = 'https://pixabay.com/api/?key=<KEY>&q=foggy+forests&image_type=photo&per_page=20';
@@ -11,12 +18,11 @@ let posts = [];
 fetch(API_URL)
   .then(response => response.json())
   .then(data => {
+
     posts = data;
-    // Replace <KEY> with API_KEY in IMAGE_URL
-    const imageUrl = IMAGE_URL.replace('<KEY>', API_KEY);
 
     // Fetch images from Pixabay
-    return fetch(imageUrl);
+    return fetch(url);
   })
   .then(response => response.json())
   .then(images => {
