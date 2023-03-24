@@ -18,6 +18,7 @@ app.set('views', './views');
 // MIDDLEWARE
 
 // ROUTES
+app.use('/', require('./routes/user'));
 
 // SERVER
 const PORT = process.env.PORT;
