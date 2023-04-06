@@ -90,7 +90,7 @@ const updateUser = async (req, res) => {
 	const id = rq.params.id;
 	const filter = { _id: id };
 	let doc = await User.findOneAndUpdate(filter, update, { new: true });
-	res.redirect('/user-list', {pageTitle: 'Updated User!'});
+	res.redirect('/user-list');
 };
 
 const deleteUser = async (req, res) => {
@@ -98,7 +98,7 @@ const deleteUser = async (req, res) => {
 	const id = req.params.id;
 	const filter = { _id: id };
 	let deletedCount = User.deleteOne(filter);
-	res.redirect('/user-list', {pageTitle:'Deleted User!'});
+	res.redirect('/user-list');
 };
 module.exports = {
 	homeView,
