@@ -29,8 +29,8 @@ const formSubmission = (req, res) => {
 		User.findOne({ email: email }).then((user) => {
 			if (user) {
 				console.log('Found User! Email already exists.');
-				pageTitle = 'Already Registered';
-				message = 'You already are registered';
+				const pageTitle = 'Already Registered';
+				message = 'You are already registered';
 				res.render('form-submission', {
 					pageTitle: pageTitle,
 					alreadyRegistered: true,
@@ -50,8 +50,8 @@ const formSubmission = (req, res) => {
 						newUser
 							.save()
 							.then(() => {
-								pageTitle = 'Form Submission Page';
-								registeredMessage = 'You are now registered';
+								const pageTitle = 'Form Submission Page';
+								registeredMessage = 'You are newly registered';
 								res.render('form-submission', {
 									pageTitle: pageTitle,
 									alreadyRegistered: false,
