@@ -36,3 +36,6 @@ const AnimalSchema = new Schema({
         required: true
     }
 });
+
+const Animal = mongoose.model('Animal', AnimalSchema);
+module.exports = Animal;
