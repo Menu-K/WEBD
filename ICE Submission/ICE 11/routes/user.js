@@ -10,7 +10,7 @@ const {
 	deleteUser,
 } = require("../controllers/userController");
 
-const router = express.Router();
+const router = require ('express').Router();
 
 router.get("/", homeView);
 

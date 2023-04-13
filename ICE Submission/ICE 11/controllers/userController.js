@@ -95,9 +95,11 @@ const updateUser = async (req, res) => {
 
 const deleteUser = async (req, res) => {
 	console.log("Deleting:");
+	console.log('4');
 	const id = req.params.id;
 	const filter = { _id: id };
 	let deletedCount = User.deleteOne(filter);
+	console.log('5');
 	res.redirect('/user-list');
 };
 module.exports = {
