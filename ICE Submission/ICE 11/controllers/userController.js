@@ -87,7 +87,7 @@ const editUser = (req, res) => {
 
 const updateUser = async (req, res) => {
 	const update = { fullName: req.body.fullName, email: req.body.email };
-	const id = rq.params.id;
+	const id = req.params.id;
 	const filter = { _id: id };
 	let doc = await User.findOneAndUpdate(filter, update, { new: true });
 	res.redirect('/user-list');

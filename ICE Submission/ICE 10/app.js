@@ -8,17 +8,28 @@ const path = require('path');
 // PRE-APP CONFIG
 dotenv.config({ path: './process.env' });
 
-const DB_CONN = process.env.MONGO_CONN_STR.replace('<PASS>', process.env.MONGO_PASS);
+const DB_CONN = process.env.MONGO_CONN_STR.replace(
+	'<PASS>',
+	process.env.MONGO_PASS
+);
 
-mongoose.connect(DB_CONN, { useUnifiedTopology: true, useNewUrlParser: true })
-    .then(() => console.log('Database Connnection Successful!'))
-        .catch((err) => console.log(`DB Connection ERROR: ${err}`));
+mongoose
+	.connect(DB_CONN, { useUnifiedTopology: true, useNewUrlParser: true })
+	.then(() => console.log('Database Connnection Successful!'))
+	.catch((err) => console.log(`DB Connection ERROR: ${err}`));
 
 // CREATE THE APP
 const app = express();
 
 // APP CONFIG
-app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', partialsDir: './views/partials', extname: '.hbs' }));
+app.engine(
+	'.hbs',
+	exphbs.engine({
+		defaultLayout: 'main',
+		partialsDir: './views/partials',
+		extname: '.hbs',
+	})
+);
 app.set('view engine', '.hbs');
 app.set('views', './views');
 
@@ -32,5 +43,5 @@ app.use('/', require('./routes/user'));
 // SERVER
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
+	console.log(`App listening on port ${PORT}`);
 });

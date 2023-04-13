@@ -2,10 +2,10 @@ Name:       Menushan Karunakaran
 ID:         100709847
 COURSE ID:  WEBD6201-06
 
-MONGO_PASS=NKUUotFCLkzVUuoY
+MONGO_PASS=XkoTbvdPCJ2Q196a
 MONGO_CONN_STR=mongodb+srv://Menu-k:<PASS>@webd06.ffvpqry.mongodb.net/test
 
 
 Work on: 
 
- 
+ Lab 4
