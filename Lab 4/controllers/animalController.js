@@ -12,7 +12,7 @@ const homeView = (req, res) => {
     });
 };
 
-
+// Animal Form View
 const formView = (req, res) => {
     const pageTitle = 'Animal Form';
     res.render('animals/entry-form', {
@@ -20,6 +20,7 @@ const formView = (req, res) => {
     });
 };
 
+// Get All Animals
 const getAllAnimals = (req, res) => {
     Animal.find().lean().then((animals) => {
         res.render('animals/all-animals', {
