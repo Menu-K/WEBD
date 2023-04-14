@@ -3,31 +3,31 @@ const Schema = mongoose.Schema;
 
 // ANIMAL SCHEMA
 const AnimalSchema = new Schema({
-    Zoo: {
+    zoo: {
         type: String,
         required: true
     },
-    Scientific_Name: {
+    scientificName: {
         type: String,
         required: true
     },
-    Common_Name: {
+    commonName: {
         type: String,
         required: true
     },
-    Given_Name: {
+    givenName: {
         type: String,
         required: true
     },
-    Gender: {
+    gender: {
         type: String,
         required: true
     },
-    Date_Of_Birth: {
+    dateOfBirth: {
         type: Date,
         required: true
     },
-    Age: {
+    age: {
         type: Number,
         required: true
     },

@@ -1,0 +1,52 @@
+<form action='/edit-animal/{{id}}' method='post'>
+    <div class='form-group'>
+        <label for='zoo'>Zoo</label>
+        <input type='text' name='zoo' id='zoo' class='form-control' value='{{animal.zoo}}' required />
+    </div>
+
+    <div class='form-group'>
+        <label for='scientificName'>Scientific Name</label>
+        <input type='text' name='scientificName' id='scientificName' class='form-control'
+            value='{{animal.scientificName}}' required />
+    </div>
+
+    <div class='form-group'>
+        <label for='commonName'>Common Name</label>
+        <input type='text' name='commonName' id='commonName' class='form-control' value='{{animal.commonName}}'
+            required />
+    </div>
+
+    <div class='form-group'>
+        <label for='givenName'>Given Name</label>
+        <input type='text' name='givenName' id='givenName' class='form-control' value='{{animal.givenName}}' required />
+    </div>
+
+    <div class='form-group'>
+        <label for='gender'>Gender</label>
+        <input type='text' name='gender' id='gender' class='form-control' value='{{animal.gender}}' required />
+    </div>
+
+    <div class='form-group'>
+        <label for='dateOfBirth'>Date of Birth</label>
+        <input type='date' name='dateOfBirth' id='dateOfBirth' class='form-control' value='{{animal.dateOfBirth}}'
+            required />
+    </div>
+
+    <div class='form-group'>
+        <label for='age'>Age</label>
+        <input type='number' name='age' id='age' class='form-control' value='{{animal.age}}' required />
+    </div>
+
+    <div class='form-group'>
+        <label for='isTransportable'>Is Transportable</label>
+        <input type='checkbox' name='isTransportable' id='isTransportable' {{#if animal.isTransportable}}checked{{/if}}
+             />
+    </div>
+
+    <button type='submit' class='btn btn-primary'>Update Animal Record</button>
+</form>
+
+<form action="/delete-animal/{{id}}" method="post">
+    <input type="hidden" name="hiddenInput">
+    <button type="submit">Delete Animal</button>
+</form>
