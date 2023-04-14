@@ -14,15 +14,15 @@ const router = require('express').Router();
 router.get('/', homeView);
 
 // FORM PAGE
-router.get('/form', formView);
-router.post('/form', formSubmission);
+router.get('/entry-form', formView);
+router.post('/entry-form', formSubmission);
 
 // Animal List
 router.get('/all-animals', getAllAnimals);
 
 // EDIT ANIMALS
 router.get('/edit-animal/:id', editAnimal);
-router.post("/edit-animal/:id", updateAnimal);
-router.post("/delete-animal/:id", deleteAnimal);
+router.post('/edit-animal/:id', updateAnimal);
+router.post('/delete-animal/:id', deleteAnimal);
 
 module.exports = router;

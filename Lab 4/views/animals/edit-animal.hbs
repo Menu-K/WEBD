@@ -1,4 +1,6 @@
 <form action='/edit-animal/{{id}}' method='post'>
+    <!-- Form fields... -->
+
     <div class='form-group'>
         <label for='zoo'>Zoo</label>
         <input type='text' name='zoo' id='zoo' class='form-control' value='{{animal.zoo}}' required />
@@ -26,10 +28,11 @@
         <input type='text' name='gender' id='gender' class='form-control' value='{{animal.gender}}' required />
     </div>
 
+
+
     <div class='form-group'>
         <label for='dateOfBirth'>Date of Birth</label>
-        <input type='date' name='dateOfBirth' id='dateOfBirth' class='form-control' value='{{animal.dateOfBirth}}'
-            required />
+        <input type='date' name='dateOfBirth' id='dateOfBirth' class='form-control' value='{{animal.dateOfBirth}}' />
     </div>
 
     <div class='form-group'>
@@ -38,15 +41,21 @@
     </div>
 
     <div class='form-group'>
-        <label for='isTransportable'>Is Transportable</label>
-        <input type='checkbox' name='isTransportable' id='isTransportable' {{#if animal.isTransportable}}checked{{/if}}
-             />
+        <label for="isTransportable">Is Transportable</label>
+        <label class='btn {{#if animal.isTransportable}}active{{/if}}'>
+            <input type='radio' name='isTransportable' value='AVAILABLE' {{#if animal.isTransportable}}checked{{/if}} />
+            Available
+        </label>
+        <label class='btn {{#unless animal.isTransportable}}active{{/unless}}'>
+            <input type='radio' name='isTransportable' value='UNAVAILABLE' {{#unless
+                animal.isTransportable}}checked{{/unless}} /> Unavailable
+        </label>
     </div>
 
-    <button type='submit' class='btn btn-primary'>Update Animal Record</button>
+    <button type='submit' class='btn btn-primary'>Submit</button>
 </form>
 
 <form action="/delete-animal/{{id}}" method="post">
     <input type="hidden" name="hiddenInput">
-    <button type="submit">Delete Animal</button>
+    <button class="btn btn-primary" type="submit">Delete Record</button>
 </form>

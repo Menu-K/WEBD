@@ -15,7 +15,7 @@ const homeView = (req, res) => {
 
 const formView = (req, res) => {
     const pageTitle = 'Animal Form';
-    res.render('entry-form', {
+    res.render('animals/entry-form', {
         pageTitle: pageTitle,
     });
 };
@@ -62,7 +62,7 @@ const updateAnimal = async (req, res) => {
         gender: req.body.gender,
         dateOfBirth: req.body.dateOfBirth,
         age: req.body.age,
-        isTransportable: req.body.isTransportable === 'on',
+        isTransportable: req.body.isTransportable === 'AVAILABLE',
     };
     let doc = await Animal.findOneAndUpdate(filter, update, { new: true })
     res.redirect('/all-animals');
