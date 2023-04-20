@@ -25,7 +25,7 @@ const AnimalSchema = new Schema({
     },
     dateOfBirth: {
         type: Date,
-        required: true
+        required: false
     },
     age: {
         type: Number,
