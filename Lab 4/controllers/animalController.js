@@ -47,6 +47,7 @@ const editAnimal = (req, res) => {
                 animal: animal,
                 id: id,
                 pageTitle: 'Edit Animal',
+                dateOfBirth: animal.dateOfBirth
             });
         })
 };
