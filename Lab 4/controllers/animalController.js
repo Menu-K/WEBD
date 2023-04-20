@@ -35,17 +35,19 @@ const getAllAnimals = (req, res) => {
 const formSubmission = (req, res) => {
     const { zoo, scientificName, commonName, givenName, gender, dateOfBirth, age, isTransportable } = req.body;
 
+    // Create a new Animal document from form data
     const newAnimal = new Animal({
         zoo,
         scientificName,
         commonName,
         givenName,
         gender,
-        dateOfBirth: new Date(dateOfBirth),
+        dateOfBirth,
         age,
         isTransportable: isTransportable === 'AVAILABLE',
     });
 
+    // Save the new Animal document to the database
     newAnimal.save()
         .then(() => {
             console.log('Animal added successfully!');
@@ -58,14 +60,25 @@ const formSubmission = (req, res) => {
 // Edit Animal
 const editAnimal = (req, res) => {
     const id = req.params.id;
+
+    // Retrieve the Animal document to be edited from the database and convert DOB
     Animal.findOne({ _id: id })
         .lean()
         .then((animal) => {
+            let animal_dob = new Date(animal.dateOfBirth);
+            let month = animal_dob.getUTCMonth() + 1;
+            if (month.toString().length == 1) {
+                month = '0' + month;
+            }
+            let day = animal_dob.getUTCDate();
+            let year = animal_dob.getUTCFullYear();
+            fDate = year + '-' + month + '-' + day;
+
             res.render('animals/edit-animal', {
                 animal: animal,
                 id: id,
                 pageTitle: 'Edit Animal',
-                dateOfBirth: animal.dateOfBirth
+                dateOfBirth: fDate
             });
         })
 };
