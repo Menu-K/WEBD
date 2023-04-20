@@ -33,27 +33,9 @@ const getAllAnimals = (req, res) => {
 
 // Form Submission
 const formSubmission = (req, res) => {
-    const { zoo, scientificName, commonName, givenName, gender, dateOfBirth, age, isTransportable } = req.body;
-
-    const newAnimal = new Animal({
-        zoo,
-        scientificName,
-        commonName,
-        givenName,
-        gender,
-        dateOfBirth: new Date(dateOfBirth),
-        age,
-        isTransportable: isTransportable === 'AVAILABLE',
-    });
-
-    newAnimal.save()
-        .then(() => {
-            console.log('Animal added successfully!');
-            res.redirect('/all-animals');
-        })
-        .catch((err) => console.log(err));
+    // Implement logic to handle form submission and add animal record to the database
+    // based on req.body data
 };
-
 
 // Edit Animal
 const editAnimal = (req, res) => {
