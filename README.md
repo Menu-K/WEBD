@@ -4,15 +4,15 @@ Versions of a Personalized website using different languages, frameworks and too
 
 
 
-### [Website (JQuery & Form Validation)](WEB APP LIST/Website(JQuery & Form Validation)/docs/index.html)
+### [Website (JQuery & Form Validation)](WEBAPPLIST/Website(JQuery&FormValidation)/docs/index.html)
 This app was made to practice and reinforce the use of the jQuery JavaScript library as
 well as JavaScript form Validation
 
 
-### [Ajax & Fetch Application](Website(Ajax & Fetch)/docs/index.html)
+### [Ajax & Fetch Application](WEBAPPLIST/Website(Ajax&Fetch)/docs/index.html)
 This app was made  to practice and reinforce the use of Ajax and Fetch API calls.
 
 
-### [Website (MVC & MongoDB)](WEB APP LIST/Website(MVC & MongoDB)/docs/index.html)
+### [Website (MVC & MongoDB)](WEBAPPLIST/Website(MVC&MongoDB)/docs/index.html)
 This app is made to reinforce the MVC architecture (software pattern) and the use of
 Mongo DB with Mongoose
