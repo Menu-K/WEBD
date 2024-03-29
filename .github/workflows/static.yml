@@ -36,7 +36,7 @@ jobs:
       - name: Upload Ajax & Fetch artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './WEBD/WEB APP LIST/Website(Ajax&Fetch)/docs' # Specify path to Ajax & Fetch application
+          path: './WEBD/WEBAPPLIST/Website(Ajax&Fetch)/docs' # Specify path to Ajax & Fetch application
       - name: Deploy Ajax & Fetch to GitHub Pages
         id: deployment_ajax_and_fetch
         uses: actions/deploy-pages@v4
