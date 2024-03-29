@@ -4,7 +4,7 @@ Versions of a Personalized website using different languages, frameworks and too
 
 
 
-### [Website (JQuery & Form Validation)](WEBAPPLIST/Website(JQuery& ormValidation)/docs/index.html)
+### [Website (JQuery & Form Validation)](WEBAPPLIST/Website(JQuery&FormValidation)/docs/index.html)
 This app was made to practice and reinforce the use of the jQuery JavaScript library as
 well as JavaScript form Validation
 
