@@ -1,63 +1,95 @@
-// Author: [Menushan Karunakaran]
-// Student ID: [100709847]
-// Date Completed: [2023-03-14]
+<!-- 
+Author: [Menushan Karunakaran]
+Student ID: [100709847]
+Date Completed: [2023-03-02]
+-->
 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<!-- Navigation bar -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-spider"></i> WEBD6201</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i>
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="products" href="product.html"><i class="fas fa-project-diagram"></i>
+                            Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="services" href="services.html"><i class="fas fa-map-signs"></i>
+                            Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="services" href="blog.html"><i class="fas fa-blog"></i>
+                            Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about" href="about.html"><i class="fas fa-info"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact" href="contact.html"><i class="fas fa-envelope"></i> Contact
+                            Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Register" href="register.html"><i class="fas fa-user-plus"></i>
+                            Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="login" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-// Set the API URLs and key
-const API_URL = 'https://jsonplaceholder.typicode.com/posts';
-const API_KEY = '34270048-f084a7934d6a57c317aee8d09';
-const IMAGE_URL = 'https://pixabay.com/api/?key=<KEY>&q=foggy+forests&image_type=photo&per_page=20';
-const url = IMAGE_URL.replace('<KEY>', API_KEY);
+<body>
+    <main class="blog-post">
+        <div class="container">
+            <section class="text-center">
+                <h4 class="mb-5"><strong>Blog Posts</strong></h4>
+                <div class="row">
+                    <div class="col-md-4>
+                    <div class="card">
+                        <img class="card-img-top">
+                        <div class="card-body">
+                            <h2 class="card-title"></h2>
+                            <div class="card-text" id="blog-container"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Scripting Section -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="./Scripts/app.js"></script>
+    <script type="module" src="./Scripts/blog.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
 
-// DOM elements
-const blogContainer = document.getElementById('blog-container');
-
-let posts = [];
-// Fetch blog posts from JSONPlaceholder
-fetch(API_URL)
-  .then(response => response.json())
-  .then(data => {
-
-    posts = data;
-
-    // Fetch images from Pixabay
-    return fetch(url);
-  })
-  .then(response => response.json())
-  .then(images => {
-    // Create a blog card for each post
-    for (let i = 0; i < images.hits.length; i++) {
-      const post = posts[i];
-      const image = images.hits[i];
-
-      // Create card elements
-      const card = document.createElement('div');
-      card.classList.add('card');
-
-      const imageElement = document.createElement('img');
-      imageElement.classList.add('card-img-top');
-      imageElement.src = image.webformatURL;
-      imageElement.alt = `Image for post ${i + 1}`;
-
-      const cardBody = document.createElement('div');
-      cardBody.classList.add('card-body');
-
-      const title = document.createElement('h2');
-      title.classList.add('card-title');
-      title.textContent = post.title;
-
-      const content = document.createElement('p');
-      content.classList.add('card-text');
-      content.textContent = post.body;
-
-      // Append elements to card
-      card.appendChild(imageElement);
-      card.appendChild(cardBody);
-      cardBody.appendChild(title);
-      cardBody.appendChild(content);
-
-      // Append card to container
-      blogContainer.appendChild(card);
-    }
-  });
+</html>
