@@ -36,7 +36,7 @@ jobs:
       - name: Upload Ajax & Fetch artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './WEBD/WEBAPPLIST/Website(Ajax&Fetch)/docs/index.html' # Specify path to Ajax & Fetch application
+          path: './WEBAPPLIST/Website(Ajax&Fetch)/docs/index.html' # Specify path to Ajax & Fetch application
       - name: Deploy Ajax & Fetch to GitHub Pages
         id: deployment_ajax_and_fetch
         uses: actions/deploy-pages@v4
@@ -55,7 +55,7 @@ jobs:
       - name: Upload JQuery & Form Validation artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './WEBD/WEBAPPLIST/Website(JQuery&FormValidation)/docs/index.html' # Specify path to JQuery & Form Validation application
+          path: './WEBAPPLIST/Website(JQuery&FormValidation)/docs/index.html' # Specify path to JQuery & Form Validation application
       - name: Deploy JQuery & Form Validation to GitHub Pages
         id: deployment_jquery_and_form_validation
         uses: actions/deploy-pages@v4
@@ -74,7 +74,7 @@ jobs:
       - name: Upload MVC & MongoDB artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './WEBD/WEBAPPLIST/Website(MVC&MongoDB)/docs/index.html' # Specify path to MVC & MongoDB application
+          path: './WEBAPPLIST/Website(MVC&MongoDB)/docs/index.html' # Specify path to MVC & MongoDB application
       - name: Deploy MVC & MongoDB to GitHub Pages
         id: deployment_mvc_and_mongodb
         uses: actions/deploy-pages@v4
